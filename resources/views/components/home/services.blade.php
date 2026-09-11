@@ -100,10 +100,10 @@
 
                         @endif
 
-                        <a
-                            href="{{ route('products', $service->slug) }}"
-                            class="service-link"
-                        >
+                       <a
+    href="{{ route('services.show', $service->slug) }}"
+    class="service-link"
+>
                             {{ $servicesSection?->button_text
                                 ?: (app()->getLocale() === 'ar'
                                     ? 'اكتشف الخدمة'

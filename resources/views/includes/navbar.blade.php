@@ -1,3 +1,17 @@
+
+@php
+    /*
+    |--------------------------------------------------------------------------
+    | Check Active Products
+    |--------------------------------------------------------------------------
+    | Show "Products" in navbar only when there is at least
+    | one active product in the database.
+    */
+
+    $hasActiveProducts = \App\Models\Product::where('is_active', true)->exists();
+@endphp
+
+
 <header class="site-header">
 
     <nav class="main-navbar">
@@ -44,6 +58,7 @@
                 ====================================================== --}}
                 <div class="navbar-menu">
 
+                    {{-- Home --}}
                     <a
                         href="{{ route('home') }}"
                         class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}"
@@ -52,6 +67,7 @@
                     </a>
 
 
+                    {{-- About --}}
                     <a
                         href="{{ route('about') }}"
                         class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}"
@@ -60,6 +76,7 @@
                     </a>
 
 
+                    {{-- Services --}}
                     <a
                         href="{{ route('services') }}"
                         class="nav-link {{ request()->routeIs('services*') ? 'active' : '' }}"
@@ -68,27 +85,43 @@
                     </a>
 
 
-                    <a
-                        href="{{ route('products') }}"
-                        class="nav-link {{ request()->routeIs('products*') ? 'active' : '' }}"
-                    >
-                        {{ app()->getLocale() === 'ar' ? 'منتجاتنا' : 'PRODUCTS' }}
-                    </a>
+                    {{-- =================================================
+                        Products
+                        Show only if at least one active product exists
+                    ================================================== --}}
+                    @if($hasActiveProducts)
+
+                        <a
+                            href="{{ route('products') }}"
+                            class="nav-link {{ request()->routeIs('products*') ? 'active' : '' }}"
+                        >
+                            {{ app()->getLocale() === 'ar'
+                                ? 'منتجاتنا'
+                                : 'PRODUCTS' }}
+                        </a>
+
+                    @endif
 
 
+                    {{-- Projects --}}
                     <a
                         href="{{ route('projects') }}"
                         class="nav-link {{ request()->routeIs('projects*') ? 'active' : '' }}"
                     >
-                        {{ app()->getLocale() === 'ar' ? 'مشاريعنا' : 'PROJECTS' }}
+                        {{ app()->getLocale() === 'ar'
+                            ? 'مشاريعنا'
+                            : 'PROJECTS' }}
                     </a>
 
 
+                    {{-- Contact --}}
                     <a
                         href="{{ route('contact') }}"
                         class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}"
                     >
-                        {{ app()->getLocale() === 'ar' ? 'تواصل معنا' : 'CONTACT' }}
+                        {{ app()->getLocale() === 'ar'
+                            ? 'تواصل معنا'
+                            : 'CONTACT' }}
                     </a>
 
                 </div>
@@ -148,7 +181,6 @@
 
                 {{-- =====================================================
                     MOBILE ACTIONS
-                    Language + Hamburger
                 ====================================================== --}}
                 <div class="mobile-actions">
 
@@ -163,7 +195,9 @@
                             ]
                         ) }}"
                         class="mobile-language-top"
-                        aria-label="{{ app()->getLocale() === 'ar' ? 'English' : 'العربية' }}"
+                        aria-label="{{ app()->getLocale() === 'ar'
+                            ? 'English'
+                            : 'العربية' }}"
                     >
 
                         <i class="bi bi-globe2"></i>
@@ -260,21 +294,28 @@
                 </a>
 
 
-                {{-- Products --}}
-                <a
-                    href="{{ route('products') }}"
-                    class="{{ request()->routeIs('products*') ? 'active' : '' }}"
-                >
+                {{-- =================================================
+                    Products
+                    Show only if at least one active product exists
+                ================================================== --}}
+                @if($hasActiveProducts)
 
-                    <i class="bi bi-box-seam"></i>
+                    <a
+                        href="{{ route('products') }}"
+                        class="{{ request()->routeIs('products*') ? 'active' : '' }}"
+                    >
 
-                    <span>
-                        {{ app()->getLocale() === 'ar'
-                            ? 'منتجاتنا'
-                            : 'PRODUCTS' }}
-                    </span>
+                        <i class="bi bi-box-seam"></i>
 
-                </a>
+                        <span>
+                            {{ app()->getLocale() === 'ar'
+                                ? 'منتجاتنا'
+                                : 'PRODUCTS' }}
+                        </span>
+
+                    </a>
+
+                @endif
 
 
                 {{-- Projects --}}
@@ -914,3 +955,5 @@
 }
 
 </style>
+  
+
