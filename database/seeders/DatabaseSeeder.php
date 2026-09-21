@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CompanySettingSeeder::class,
             HeroSlideSeeder::class,
+            HomeSectionSeeder::class,
             ServiceSeeder::class,
             CoreValueSeeder::class,
             ProjectSeeder::class,

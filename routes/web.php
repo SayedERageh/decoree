@@ -6,6 +6,7 @@ use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SitemapController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,5 +72,6 @@ Route::get('/projects/{slug}', [PageController::class, 'project'])
 Route::get('/contact', [PageController::class, 'contact'])
     ->name('contact');
 
- Route::get('/services/{slug}', [PageController::class, 'service'])
-    ->name('services.show');
+
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])
+    ->name('sitemap');

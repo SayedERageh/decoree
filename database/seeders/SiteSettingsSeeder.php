@@ -19,26 +19,26 @@ class SiteSettingsSeeder extends Seeder
         SiteSetting::updateOrCreate(
             ['id' => 1],
             [
-                'site_name' => 'Tabarak',
+                'site_name' => 'جي آر سي مكة | GRC Makkah',
 
-                'primary_color' => '#55bce8',
-                'primary_dark_color' => '#168dcc',
+                'primary_color' => '#b08d57',
+                'primary_dark_color' => '#8a6a3f',
 
-                'secondary_color' => '#061a2b',
-                'secondary_dark_color' => '#0b2b43',
+                'secondary_color' => '#111111',
+                'secondary_dark_color' => '#1c1c1c',
 
-                'light_blue_color' => '#dff4fc',
-                'light_color' => '#f5f8fa',
+                'light_blue_color' => '#f5f1e8',
+                'light_color' => '#f8f8f8',
 
                 'white_color' => '#ffffff',
 
-                'text_color' => '#182b3a',
-                'muted_color' => '#71808d',
+                'text_color' => '#222222',
+                'muted_color' => '#6b6b6b',
 
-                'border_color' => '#dfe7ec',
+                'border_color' => '#e5e0d7',
 
                 'site_description' =>
-                    'شركة متخصصة في خدمات السقالات والمقاولات وتوفير حلول آمنة وعالية الجودة.',
+                    'جي آر سي مكة | GRC Makkah شركة متخصصة في أعمال GRC والواجهات المعمارية والديكورات الخارجية في مكة المكرمة، وتشمل خدماتنا تصنيع وتركيب واجهات GRC والكرانيش والأعمدة والأقواس والقباب والعناصر المعمارية للفلل والقصور والمباني والمشروعات المختلفة.',
             ]
         );
 
@@ -58,32 +58,35 @@ class SiteSettingsSeeder extends Seeder
             */
 
             'home' => [
-                'title_ar' => 'تبـارك للسقالات والخدمات',
-                'title_en' => 'Tabarak Scaffolding & Services',
+                'title_ar' =>
+                    'جي آر سي مكة | شركة GRC مكة للواجهات والديكورات الخارجية',
+
+                'title_en' =>
+                    'GRC Makkah | GRC Facades & Exterior Decorations Company',
 
                 'description_ar' =>
-                    'شركة تبـارك متخصصة في خدمات السقالات والحلول الإنشائية وتوفير خدمات آمنة وعالية الجودة.',
+                    'جي آر سي مكة شركة متخصصة في أعمال GRC مكة والواجهات المعمارية والديكورات الخارجية في مكة المكرمة. تصنيع وتركيب واجهات GRC والكرانيش والأعمدة والأقواس والقباب وعناصر GRC للفلل والقصور والمباني.',
 
                 'description_en' =>
-                    'Tabarak specializes in scaffolding services and construction solutions with high-quality and safe services.',
+                    'GRC Makkah specializes in GRC works, architectural facades, and exterior decorations in Makkah, Saudi Arabia, including GRC facades, cornices, columns, arches, domes, and custom architectural elements.',
 
                 'keywords_ar' =>
-                    'سقالات, سقالات معدنية, شركات سقالات, تأجير سقالات, تركيب سقالات',
+                    'جي آر سي مكة, GRC مكة, GRC Makkah, شركة GRC في مكة, شركة جي آر سي مكة, أعمال GRC مكة, واجهات GRC مكة, ديكورات GRC مكة, ديكورات خارجية مكة, واجهات معمارية مكة, مقاول GRC مكة, تركيب GRC مكة, تصنيع GRC مكة, كرانيش GRC مكة, أعمدة GRC مكة, قباب GRC مكة, أقواس GRC مكة, واجهات فلل مكة, واجهات قصور مكة',
 
                 'keywords_en' =>
-                    'scaffolding, metal scaffolding, scaffolding company, scaffolding rental, scaffolding services',
+                    'GRC Makkah, GRC company Makkah, GRC contractor Makkah, GRC facades Makkah, GRC works Makkah, exterior decorations Makkah, architectural facades Makkah, GRC installation Makkah, GRC manufacturing Makkah, villa facades Makkah, palace facades Makkah',
 
                 'og_title_ar' =>
-                    'تبـارك للسقالات والخدمات',
+                    'جي آر سي مكة | أعمال GRC والواجهات والديكورات الخارجية',
 
                 'og_title_en' =>
-                    'Tabarak Scaffolding & Services',
+                    'GRC Makkah | GRC Facades & Exterior Decorations',
 
                 'og_description_ar' =>
-                    'حلول متكاملة وآمنة في مجال السقالات والخدمات الإنشائية.',
+                    'حلول متكاملة من جي آر سي مكة لأعمال GRC والواجهات المعمارية والديكورات الخارجية للفلل والقصور والمباني في مكة المكرمة.',
 
                 'og_description_en' =>
-                    'Professional and safe scaffolding and construction solutions.',
+                    'Complete GRC Makkah solutions for GRC works, architectural facades, and exterior decorations for villas, palaces, and buildings in Makkah.',
             ],
 
 
@@ -94,32 +97,35 @@ class SiteSettingsSeeder extends Seeder
             */
 
             'about' => [
-                'title_ar' => 'من نحن | تبـارك للسقالات والخدمات',
-                'title_en' => 'About Us | Tabarak Scaffolding & Services',
+                'title_ar' =>
+                    'من نحن | جي آر سي مكة | شركة GRC مكة',
+
+                'title_en' =>
+                    'About Us | GRC Makkah',
 
                 'description_ar' =>
-                    'تعرف على شركة تبـارك وخبراتها في مجال السقالات والخدمات الإنشائية.',
+                    'تعرف على جي آر سي مكة وخدمات شركة GRC مكة في أعمال GRC والواجهات المعمارية والديكورات الخارجية وتصنيع وتركيب العناصر المعمارية للفلل والقصور والمباني في مكة المكرمة.',
 
                 'description_en' =>
-                    'Learn more about Tabarak and our experience in scaffolding and construction services.',
+                    'Learn about GRC Makkah and our services in GRC works, architectural facades, exterior decorations, and custom GRC architectural elements for villas, palaces, and buildings in Makkah.',
 
                 'keywords_ar' =>
-                    'من نحن, تبـارك, شركة سقالات, خدمات إنشائية',
+                    'من نحن جي آر سي مكة, جي آر سي مكة, GRC مكة, شركة GRC مكة, شركة GRC في مكة, أعمال GRC مكة, واجهات GRC مكة, ديكورات GRC مكة, مقاول GRC مكة',
 
                 'keywords_en' =>
-                    'about tabarak, scaffolding company, construction services',
+                    'about GRC Makkah, GRC Makkah company, GRC company Makkah, GRC contractor Makkah, GRC facades Makkah, exterior decorations Makkah',
 
                 'og_title_ar' =>
-                    'من نحن - تبـارك',
+                    'من نحن | جي آر سي مكة',
 
                 'og_title_en' =>
-                    'About Tabarak',
+                    'About GRC Makkah',
 
                 'og_description_ar' =>
-                    'تعرف على شركة تبـارك وخبراتها وخدماتها.',
+                    'تعرف على جي آر سي مكة وخبرتنا في تنفيذ أعمال GRC والواجهات والديكورات الخارجية في مكة المكرمة.',
 
                 'og_description_en' =>
-                    'Learn more about Tabarak and our services.',
+                    'Discover GRC Makkah and our expertise in GRC works, architectural facades, and exterior decorations in Makkah.',
             ],
 
 
@@ -130,32 +136,35 @@ class SiteSettingsSeeder extends Seeder
             */
 
             'services' => [
-                'title_ar' => 'خدماتنا | تبـارك للسقالات والخدمات',
-                'title_en' => 'Services | Tabarak Scaffolding & Services',
+                'title_ar' =>
+                    'خدمات جي آر سي مكة | واجهات وديكورات GRC مكة',
+
+                'title_en' =>
+                    'GRC Makkah Services | Facades & Exterior Decorations',
 
                 'description_ar' =>
-                    'اكتشف خدمات تبـارك المتخصصة في السقالات والحلول الإنشائية.',
+                    'اكتشف خدمات جي آر سي مكة في تصنيع وتركيب واجهات GRC مكة والديكورات الخارجية والكرانيش والأعمدة والأقواس والقباب والعناصر المعمارية حسب التصميم في مكة المكرمة.',
 
                 'description_en' =>
-                    'Discover Tabarak professional scaffolding and construction services.',
+                    'Explore GRC Makkah services including GRC facades, exterior decorations, cornices, columns, arches, domes, installation, manufacturing, and custom architectural elements.',
 
                 'keywords_ar' =>
-                    'خدمات السقالات, سقالات, تركيب سقالات, تأجير سقالات',
+                    'خدمات جي آر سي مكة, خدمات GRC مكة, أعمال GRC مكة, واجهات GRC مكة, تركيب GRC مكة, تصنيع GRC مكة, ديكورات GRC مكة, ديكورات خارجية مكة, كرانيش GRC مكة, أعمدة GRC مكة, قباب GRC مكة, أقواس GRC مكة, واجهات فلل مكة, واجهات قصور مكة, شركة GRC في مكة',
 
                 'keywords_en' =>
-                    'scaffolding services, scaffolding installation, scaffolding rental',
+                    'GRC Makkah services, GRC works Makkah, GRC facades Makkah, GRC installation Makkah, GRC manufacturing Makkah, exterior decorations Makkah, GRC cornices Makkah, GRC columns Makkah, GRC domes Makkah, GRC arches Makkah',
 
                 'og_title_ar' =>
-                    'خدماتنا - تبـارك',
+                    'خدمات جي آر سي مكة | GRC Makkah',
 
                 'og_title_en' =>
-                    'Our Services - Tabarak',
+                    'GRC Makkah Services',
 
                 'og_description_ar' =>
-                    'مجموعة متكاملة من خدمات السقالات والحلول الإنشائية.',
+                    'خدمات متكاملة من جي آر سي مكة في أعمال GRC والواجهات المعمارية والديكورات الخارجية والتصنيع والتركيب.',
 
                 'og_description_en' =>
-                    'Professional scaffolding and construction solutions.',
+                    'Complete GRC Makkah services including GRC works, architectural facades, exterior decorations, manufacturing, and installation.',
             ],
 
 
@@ -166,32 +175,35 @@ class SiteSettingsSeeder extends Seeder
             */
 
             'projects' => [
-                'title_ar' => 'مشروعاتنا | تبـارك للسقالات والخدمات',
-                'title_en' => 'Projects | Tabarak Scaffolding & Services',
+                'title_ar' =>
+                    'مشروعات جي آر سي مكة | أعمال GRC والواجهات',
+
+                'title_en' =>
+                    'GRC Makkah Projects | GRC Facades & Exterior Decorations',
 
                 'description_ar' =>
-                    'تعرف على أبرز المشروعات التي نفذتها شركة تبـارك في مجال السقالات والخدمات الإنشائية.',
+                    'شاهد مشروعات جي آر سي مكة وأعمال GRC والواجهات المعمارية والديكورات الخارجية للفلل والقصور والمباني والمشروعات المختلفة في مكة المكرمة.',
 
                 'description_en' =>
-                    'Explore some of Tabarak’s major projects in scaffolding and construction services.',
+                    'Explore GRC Makkah projects featuring GRC facades, architectural elements, and exterior decorations for villas, palaces, buildings, and architectural projects in Makkah.',
 
                 'keywords_ar' =>
-                    'مشروعات السقالات, مشاريع إنشائية, تبـارك, سقالات',
+                    'مشروعات جي آر سي مكة, مشاريع GRC مكة, أعمال GRC مكة, مشاريع GRC في مكة, واجهات GRC مكة, مشروعات واجهات مكة, ديكورات GRC مكة, ديكورات خارجية مكة, واجهات فلل مكة, واجهات قصور مكة, مشاريع معمارية مكة',
 
                 'keywords_en' =>
-                    'scaffolding projects, construction projects, Tabarak',
+                    'GRC Makkah projects, GRC projects Makkah, GRC facade projects Makkah, architectural facade projects Makkah, exterior decoration projects Makkah, villa facades Makkah, palace facades Makkah',
 
                 'og_title_ar' =>
-                    'مشروعاتنا - تبـارك',
+                    'مشروعاتنا | جي آر سي مكة',
 
                 'og_title_en' =>
-                    'Our Projects - Tabarak',
+                    'GRC Makkah Projects',
 
                 'og_description_ar' =>
-                    'استعرض مشروعات وأعمال شركة تبـارك.',
+                    'استعرض مشروعات وأعمال جي آر سي مكة في الواجهات المعمارية وديكورات GRC والواجهات الخارجية في مكة المكرمة.',
 
                 'og_description_en' =>
-                    'Explore Tabarak projects and completed work.',
+                    'Explore GRC Makkah projects in architectural facades, GRC decorations, and exterior architectural works in Makkah.',
             ],
 
 
@@ -202,32 +214,35 @@ class SiteSettingsSeeder extends Seeder
             */
 
             'contact' => [
-                'title_ar' => 'تواصل معنا | تبـارك للسقالات والخدمات',
-                'title_en' => 'Contact Us | Tabarak Scaffolding & Services',
+                'title_ar' =>
+                    'تواصل مع جي آر سي مكة | شركة GRC في مكة',
+
+                'title_en' =>
+                    'Contact GRC Makkah | GRC Company in Makkah',
 
                 'description_ar' =>
-                    'تواصل مع شركة تبـارك للاستفسار عن خدمات السقالات والحلول الإنشائية.',
+                    'تواصل مع جي آر سي مكة للحصول على استشارة أو طلب عرض سعر لأعمال GRC مكة والواجهات والديكورات الخارجية وواجهات الفلل والقصور والمباني في مكة المكرمة.',
 
                 'description_en' =>
-                    'Contact Tabarak for scaffolding services and construction solutions.',
+                    'Contact GRC Makkah for a consultation or quotation for GRC works, architectural facades, exterior decorations, villa facades, palace facades, and building projects in Makkah.',
 
                 'keywords_ar' =>
-                    'تواصل معنا, شركة تبـارك, سقالات, خدمات إنشائية',
+                    'تواصل مع جي آر سي مكة, شركة GRC في مكة, شركة جي آر سي مكة, مقاول GRC مكة, طلب عرض سعر GRC مكة, تركيب GRC مكة, واجهات GRC مكة, ديكورات GRC مكة, ديكورات خارجية مكة, أعمال GRC مكة',
 
                 'keywords_en' =>
-                    'contact Tabarak, scaffolding, construction services',
+                    'contact GRC Makkah, GRC company in Makkah, GRC contractor Makkah, GRC quotation Makkah, GRC installation Makkah, GRC facades Makkah, exterior decorations Makkah',
 
                 'og_title_ar' =>
-                    'تواصل معنا - تبـارك',
+                    'تواصل معنا | جي آر سي مكة',
 
                 'og_title_en' =>
-                    'Contact Us - Tabarak',
+                    'Contact GRC Makkah',
 
                 'og_description_ar' =>
-                    'تواصل معنا لمعرفة المزيد عن خدماتنا وحلولنا.',
+                    'اطلب عرض سعر أو استشارة من جي آر سي مكة لأعمال GRC والواجهات والديكورات الخارجية في مكة المكرمة.',
 
                 'og_description_en' =>
-                    'Get in touch with us to learn more about our services.',
+                    'Request a quotation or consultation from GRC Makkah for GRC works, facades, and exterior decorations in Makkah.',
             ],
         ];
 
