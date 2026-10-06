@@ -11,431 +11,371 @@ class ServiceSeeder extends Seeder
     {
         $services = [
 
-            /*
-            |--------------------------------------------------------------------------
-            | 1. GRC Works
-            |--------------------------------------------------------------------------
-            */
-
             [
-                'title_ar' => 'أعمال GRC مكة',
-                'title_en' => 'GRC Makkah Works',
+                'title_ar' => 'الديكور الداخلي المتكامل',
+                'title_en' => 'Complete Interior Design',
 
-                'slug' => 'grc-makkah-works',
+                'slug' => 'complete-interior-design',
 
                 'short_description_ar' =>
-                    'تنفيذ وتصنيع وتركيب أعمال GRC مكة والديكورات المعمارية الخارجية للفلل والقصور والمباني والمشروعات المختلفة.',
+                    'تصميم وتنفيذ متكامل للديكور الداخلي للمنازل والفلل بأسلوب عصري ومودرن يناسب ذوق العميل والمساحة.',
 
                 'short_description_en' =>
-                    'Manufacturing, supply, and installation of GRC Makkah works and exterior architectural decorations for villas, palaces, buildings, and various projects.',
+                    'Complete interior design and execution for homes and villas with modern solutions tailored to the client’s style and space.',
 
                 'description_ar' =>
-                    'تقدم شركة جي آر سي مكة خدمات متكاملة في أعمال GRC مكة تشمل التصميم والتجهيز والتصنيع والتوريد والتركيب والتشطيب النهائي. يتم تنفيذ عناصر GRC في مكة المكرمة حسب التصميمات والمقاسات المطلوبة لكل مشروع، مع الاهتمام بدقة التصنيع وجودة التنفيذ والتفاصيل المعمارية.
+                    'نقدم خدمات متكاملة في تصميم وتنفيذ الديكور الداخلي للمنازل والفلل في الدمام والخبر والقطيف، بداية من دراسة المساحة واختيار التصميم المناسب وحتى تنفيذ التفاصيل النهائية.
 
-                    تشمل أعمال جي آر سي مكة تنفيذ الواجهات المعمارية، كرانيش GRC، أعمدة GRC، أقواس GRC، قباب GRC، الإطارات، الحليات، الزخارف والبانوهات وعناصر الديكور الخارجي.
+                    تشمل الخدمة تنسيق جميع عناصر الديكور الداخلي من الجدران والأسقف والإضاءة والخامات والألوان والأثاث الثابت، للوصول إلى مساحة متناسقة تجمع بين الجمال والعملية.
 
-                    نقدم حلول GRC مكة للفلل والقصور والمباني السكنية والتجارية والإدارية والفنادق والمجمعات والمشروعات المعمارية المختلفة، مع إمكانية تنفيذ العناصر حسب التصميم الهندسي والطابع المعماري للمبنى.
+                    نعمل على تنفيذ التصاميم العصرية والمودرن والكلاسيكية حسب طبيعة المشروع وذوق العميل، مع الاهتمام بكل تفصيلة للوصول إلى نتيجة أنيقة ومميزة.
 
-                    نحرص في كل مشروع على الجمع بين جمال التصميم والمتانة ودقة القياسات وجودة التركيب والتشطيب للحصول على أعمال GRC مكة بمظهر معماري احترافي.',
+                    هدفنا تقديم مساحة داخلية متكاملة تعكس شخصية أصحاب المنزل وتحقق أفضل استغلال للمساحة.',
 
                 'description_en' =>
-                    'GRC Makkah provides complete GRC services including design preparation, manufacturing, supply, installation, and final finishing. GRC elements are produced according to the required architectural designs and project dimensions in Makkah, with a strong focus on precision, quality, and architectural details.
+                    'We provide complete interior design and execution services for homes and villas in Dammam, Khobar, and Qatif, from space planning and design selection to final execution.
 
-                    GRC Makkah works include architectural facades, GRC cornices, columns, arches, domes, frames, trims, decorative elements, panels, and exterior architectural details.
+                    The service covers interior walls, ceilings, lighting, materials, colors, and built-in elements to create a balanced space that combines style and functionality.
 
-                    We provide GRC solutions for villas, palaces, residential buildings, commercial and administrative buildings, hotels, compounds, and various architectural projects in Makkah.
+                    We deliver modern, contemporary, and classic interiors according to the project requirements and client preferences, with attention to every detail.
 
-                    Our goal is to combine architectural beauty, durability, accurate measurements, professional installation, and high-quality finishing in every GRC Makkah project.',
+                    Our goal is to create a complete interior that reflects the client’s personality and makes the best use of the available space.',
 
-                'icon' => 'bi bi-building',
-                'image' => 'services/grc-works.jpg',
+                'icon' => 'bi bi-house-heart',
+                'image' => 'services/complete-interior-design.jpg',
 
                 'sort_order' => 1,
                 'is_active' => true,
             ],
 
-            /*
-            |--------------------------------------------------------------------------
-            | 2. GRC Facades
-            |--------------------------------------------------------------------------
-            */
-
             [
-                'title_ar' => 'واجهات GRC مكة',
-                'title_en' => 'GRC Makkah Facades',
+                'title_ar' => 'ديكورات التلفزيون',
+                'title_en' => 'TV Wall Designs',
 
-                'slug' => 'grc-makkah-facades',
+                'slug' => 'tv-wall-designs',
 
                 'short_description_ar' =>
-                    'تصميم وتنفيذ واجهات GRC مكة للفلل والقصور والمباني السكنية والتجارية والإدارية في مكة المكرمة.',
+                    'تصميم وتنفيذ ديكورات تلفزيون مودرن تجمع بين الخامات والإضاءة والتفاصيل الأنيقة بما يناسب مساحة المنزل.',
 
                 'short_description_en' =>
-                    'Design and installation of GRC Makkah facades for villas, palaces, residential, commercial, and administrative buildings.',
+                    'Modern TV wall designs combining materials, lighting, and elegant details tailored to each interior space.',
 
                 'description_ar' =>
-                    'تخصص شركة جي آر سي مكة في تصميم وتنفيذ واجهات GRC مكة المعمارية التي تجمع بين التصميم الجمالي والدقة في التنفيذ والمتانة. نقدم حلول واجهات GRC في مكة المكرمة للتصميمات الحديثة والكلاسيكية والنيو كلاسيك.
+                    'نصمم وننفذ ديكورات تلفزيون عصرية ومودرن تناسب مختلف مساحات المنازل والفلل في الدمام والخبر والقطيف.
 
-                    تشمل خدمة واجهات GRC مكة تنفيذ الكرانيش والحليات والإطارات والأعمدة والأقواس والبانوهات والزخارف والعناصر المعمارية المختلفة حسب تصميم المشروع.
+                    يتم اختيار الخامات والألوان والإضاءة والتفاصيل حسب تصميم المكان، مع إمكانية دمج الشاشات ووحدات التخزين والرفوف والعناصر الديكورية بطريقة عملية وأنيقة.
 
-                    نعمل مع ملاك الفلل والقصور والمقاولين والمهندسين وأصحاب المشروعات لتنفيذ واجهات معمارية مميزة في مكة، مع الاهتمام بدقة القياسات وتناسق العناصر وجودة التصنيع والتركيب والتشطيب النهائي.
+                    نهتم بتناسق ديكور التلفزيون مع باقي عناصر المنزل للحصول على جدار مميز يضيف قيمة جمالية للمساحة.
 
-                    إذا كنت تبحث عن شركة GRC في مكة لتنفيذ واجهة معمارية متكاملة، فإن حلول جي آر سي مكة تشمل مراحل تجهيز وتصنيع وتركيب عناصر الواجهة وفق متطلبات المشروع.',
+                    يتم تنفيذ كل تصميم وفق المقاسات الفعلية للمكان واحتياجات العميل.',
 
                 'description_en' =>
-                    'GRC Makkah specializes in designing and installing architectural GRC facades that combine aesthetic appeal, precision, and durability. Our GRC Makkah facade solutions are suitable for modern, classic, and neo-classical architectural styles.
+                    'We design and execute modern TV walls for homes and villas in Dammam, Khobar, and Qatif.
 
-                    GRC Makkah facade services include cornices, trims, frames, columns, arches, decorative panels, and customized architectural elements.
+                    Materials, colors, lighting, storage units, shelves, and decorative elements are selected according to the space and client requirements.
 
-                    We work with villa owners, palace owners, contractors, architects, and project owners to create distinctive architectural facades in Makkah with accurate measurements, coordinated elements, quality manufacturing, professional installation, and finishing.
+                    Each TV wall is designed to complement the surrounding interior and create a distinctive focal point.
 
-                    GRC Makkah provides complete facade solutions from preparation and manufacturing to installation according to project requirements.',
+                    Every design is customized according to the actual dimensions of the space and the client’s needs.',
 
-                'icon' => 'bi bi-buildings',
-                'image' => 'services/grc-facades.jpg',
+                'icon' => 'bi bi-tv',
+                'image' => 'services/tv-wall-designs.jpg',
 
                 'sort_order' => 2,
                 'is_active' => true,
             ],
 
-            /*
-            |--------------------------------------------------------------------------
-            | 3. Exterior Decorations
-            |--------------------------------------------------------------------------
-            */
-
             [
-                'title_ar' => 'ديكورات GRC مكة الخارجية',
-                'title_en' => 'GRC Makkah Exterior Decorations',
+                'title_ar' => 'تصميم غرف النوم',
+                'title_en' => 'Bedroom Design',
 
-                'slug' => 'grc-makkah-exterior-decorations',
+                'slug' => 'bedroom-design',
 
                 'short_description_ar' =>
-                    'تنفيذ ديكورات GRC مكة والزخارف الخارجية للواجهات ومداخل الفلل والقصور والمباني.',
+                    'تصميم وتنفيذ غرف نوم عصرية ومريحة تجمع بين الأناقة والعملية وتناسب المساحة واحتياجات الأسرة.',
 
                 'short_description_en' =>
-                    'GRC Makkah exterior decorations and architectural details for facades, villas, palaces, entrances, and buildings.',
+                    'Modern and comfortable bedroom designs that combine style and functionality while fitting the space and family needs.',
 
                 'description_ar' =>
-                    'تقدم شركة جي آر سي مكة خدمات الديكورات الخارجية للمباني والفلل والقصور والمشروعات التجارية والإدارية في مكة المكرمة، مع إمكانية تنفيذ التصميمات الكلاسيكية والعصرية حسب هوية كل مشروع.
+                    'نقدم تصميم وتنفيذ غرف نوم مودرن وعصرية تناسب المنازل والفلل في الدمام والخبر والقطيف.
 
-                    تشمل ديكورات GRC مكة الكرانيش والحليات والزخارف والإطارات والبانوهات والأعمدة والأقواس والعناصر المعمارية التي تضيف تفاصيل جمالية للواجهة.
+                    نهتم بتنسيق ألوان الجدران والخامات والإضاءة والخزائن والديكورات للحصول على غرفة نوم هادئة ومريحة ومتناسقة.
 
-                    نعمل على تحويل التصميم المعماري إلى عناصر GRC منفذة بدقة، بداية من دراسة الرسومات والمقاسات وحتى التصنيع والتوريد والتركيب والتشطيب.
+                    يمكن تنفيذ التصميم حسب مساحة الغرفة واحتياجات العميل مع استغلال كل جزء بطريقة عملية دون التأثير على جمال التصميم.
 
-                    تهدف حلول جي آر سي مكة إلى تقديم ديكورات خارجية متناسقة مع تصميم المبنى وتجمع بين الفخامة والجودة والمتانة ودقة التنفيذ.',
+                    نركز على التفاصيل التي تجعل غرفة النوم مساحة مريحة وأنيقة للاستخدام اليومي.',
 
                 'description_en' =>
-                    'GRC Makkah provides exterior decoration solutions for villas, palaces, residential, commercial, and administrative buildings in Makkah, including classic and modern architectural styles.
+                    'We design and execute modern bedrooms for homes and villas in Dammam, Khobar, and Qatif.
 
-                    GRC Makkah exterior decorations include cornices, trims, decorative elements, frames, panels, columns, arches, and customized architectural details.
+                    Wall colors, materials, lighting, wardrobes, and decorative elements are carefully coordinated to create a calm and comfortable bedroom.
 
-                    We transform architectural concepts and drawings into accurately manufactured and professionally installed GRC exterior elements, from measurements and manufacturing to installation and finishing.
+                    Each design is customized according to the room dimensions and client requirements while making efficient use of the available space.
 
-                    Our GRC Makkah exterior decoration solutions are designed to enhance building facades while combining elegance, durability, quality, and precise execution.',
+                    We focus on details that make the bedroom both elegant and comfortable for everyday living.',
 
-                'icon' => 'bi bi-stars',
-                'image' => 'services/exterior-decorations.jpg',
+                'icon' => 'bi bi-moon-stars',
+                'image' => 'services/bedroom-design.jpg',
 
                 'sort_order' => 3,
                 'is_active' => true,
             ],
 
-            /*
-            |--------------------------------------------------------------------------
-            | 4. Villa & Palace Facades
-            |--------------------------------------------------------------------------
-            */
-
             [
-                'title_ar' => 'واجهات فلل وقصور GRC مكة',
-                'title_en' => 'GRC Makkah Villa & Palace Facades',
+                'title_ar' => 'الخزائن والدواليب المودرن',
+                'title_en' => 'Modern Wardrobes & Cabinets',
 
-                'slug' => 'grc-makkah-villa-palace-facades',
+                'slug' => 'modern-wardrobes-cabinets',
 
                 'short_description_ar' =>
-                    'تصميم وتنفيذ واجهات فلل وقصور GRC مكة باستخدام الكرانيش والأعمدة والأقواس والزخارف المعمارية.',
+                    'تصميم وتنفيذ خزائن ودواليب مودرن بتقسيمات عملية وتشطيبات أنيقة واستغلال ذكي للمساحات.',
 
                 'short_description_en' =>
-                    'GRC Makkah villa and palace facades using GRC columns, cornices, arches, and architectural decorative elements.',
+                    'Custom modern wardrobes and cabinets with practical layouts, elegant finishes, and efficient use of space.',
 
                 'description_ar' =>
-                    'تتخصص شركة جي آر سي مكة في تنفيذ واجهات الفلل والقصور باستخدام عناصر GRC والديكورات المعمارية الخارجية في مكة المكرمة.
+                    'نصمم وننفذ الخزائن والدواليب المودرن للمنازل والفلل، مع الاهتمام بالمساحة والتقسيم الداخلي والتشطيبات النهائية.
 
-                    نقدم حلولًا مخصصة لواجهات الفلل والقصور بما يتناسب مع التصميم المعماري للمبنى، سواء كان التصميم كلاسيكيًا أو مودرن أو نيو كلاسيك.
+                    يتم تصميم الخزائن حسب المقاسات الفعلية للمكان لتوفير أفضل استغلال ممكن للمساحة، مع تقسيمات داخلية تناسب احتياجات العميل.
 
-                    تشمل أعمال واجهات GRC مكة تنفيذ الأعمدة والكرانيش والأقواس والإطارات والزخارف والبانوهات والعناصر الخاصة بالمداخل والواجهات.
+                    تشمل الأعمال خزائن غرف النوم ووحدات التخزين والخزائن الجدارية والحلول المخصصة للمساحات المختلفة.
 
-                    نهتم بالتفاصيل المعمارية التي تجعل واجهة الفيلا أو القصر أكثر فخامة وتناسقًا، مع الالتزام بدقة القياسات وجودة التصنيع والتركيب والتشطيب.',
+                    نحرص على الجمع بين الشكل العصري والعملية وجودة التنفيذ.',
 
                 'description_en' =>
-                    'GRC Makkah specializes in villa and palace facades using GRC and exterior architectural decoration elements in Makkah.
+                    'We design and execute modern wardrobes and cabinets for homes and villas with careful attention to space, internal layouts, and finishes.
 
-                    Our facade solutions are customized according to the architectural style of each building, including classic, modern, and neo-classical designs.
+                    Each wardrobe is customized according to the actual dimensions of the space to maximize storage and functionality.
 
-                    GRC Makkah villa and palace facade services include columns, cornices, arches, frames, decorative panels, entrances, and customized facade elements.
+                    Our solutions include bedroom wardrobes, storage units, wall cabinets, and customized storage solutions.
 
-                    We focus on architectural details, proportions, accurate measurements, professional installation, and high-quality finishing.',
+                    We combine modern aesthetics, practical layouts, and quality execution in every project.',
 
-                'icon' => 'bi bi-house',
-                'image' => 'services/villa-palace-facades.jpg',
+                'icon' => 'bi bi-box-seam',
+                'image' => 'services/modern-wardrobes.jpg',
 
                 'sort_order' => 4,
                 'is_active' => true,
             ],
 
-            /*
-            |--------------------------------------------------------------------------
-            | 5. GRC Cornices
-            |--------------------------------------------------------------------------
-            */
-
             [
-                'title_ar' => 'كرانيش GRC مكة وحليات الواجهات',
-                'title_en' => 'GRC Makkah Cornices & Facade Trims',
+                'title_ar' => 'تكسيات الجدران',
+                'title_en' => 'Wall Finishes',
 
-                'slug' => 'grc-makkah-cornices-facade-trims',
+                'slug' => 'wall-finishes',
 
                 'short_description_ar' =>
-                    'تصنيع وتركيب كرانيش GRC مكة وحليات وزخارف الواجهات بتصميمات تناسب مختلف الطرز المعمارية.',
+                    'تنفيذ تكسيات جدارية وديكورات حائطية عصرية تضيف فخامة وشخصية مميزة للمساحات الداخلية.',
 
                 'short_description_en' =>
-                    'Manufacturing and installation of GRC Makkah cornices, trims, and facade details for different architectural styles.',
+                    'Modern wall finishes and decorative solutions that add character, depth, and elegance to interior spaces.',
 
                 'description_ar' =>
-                    'توفر شركة جي آر سي مكة تصنيع وتركيب كرانيش GRC مكة وحليات الواجهات بمختلف الأشكال والتصميمات، مع إمكانية تنفيذ العناصر حسب الرسومات والمقاسات الخاصة بكل مشروع.
+                    'نقدم حلول تكسيات الجدران والديكورات الحائطية بتصاميم عصرية تناسب المنازل والفلل والمجالس وغرف المعيشة والمداخل.
 
-                    تستخدم كرانيش GRC مكة لإضافة تفاصيل معمارية مميزة للواجهات والفلل والقصور والمباني التجارية والإدارية في مكة المكرمة.
+                    يتم اختيار الخامات والألوان والتفاصيل بما يتناسب مع التصميم الداخلي للمكان، مع إمكانية دمج الإضاءة والمرايات والعناصر الديكورية.
 
-                    نحرص على دقة الأبعاد وتناسق القطع وجودة التصنيع والتركيب للحصول على خطوط وتشطيبات متناسقة مع التصميم العام للواجهة.
+                    تساعد التكسيات الجدارية على تغيير شكل المساحة وإضافة طابع فاخر ومميز دون الحاجة إلى تغيير جميع عناصر المكان.
 
-                    يمكن تنفيذ كرانيش GRC مكة حسب التصميم المعماري المطلوب بما يتناسب مع الواجهات الكلاسيكية والمودرن والنيو كلاسيك.',
+                    يتم تنفيذ كل تصميم حسب المقاسات الفعلية وطبيعة الجدار والهوية التصميمية للمشروع.',
 
                 'description_en' =>
-                    'GRC Makkah manufactures and installs cornices, facade trims, and architectural details in various designs according to project drawings and dimensions.
+                    'We provide modern wall finishes and decorative wall solutions for homes, villas, living rooms, entrances, and majlis spaces.
 
-                    GRC Makkah cornices enhance the architectural appearance of villas, palaces, residential, commercial, and administrative buildings in Makkah.
+                    Materials, colors, and details are selected to complement the existing interior design, with options to integrate lighting, mirrors, and decorative elements.
 
-                    We focus on dimensional accuracy, consistency, manufacturing quality, professional installation, and finishing.
+                    Wall finishes can transform a space and add a refined character without changing the entire interior.
 
-                    Custom GRC Makkah cornices can be produced according to architectural designs and different classic, modern, and neo-classical styles.',
+                    Every design is executed according to the actual wall dimensions and the overall design identity of the project.',
 
-                'icon' => 'bi bi-border-style',
-                'image' => 'services/grc-cornices.jpg',
+                'icon' => 'bi bi-grid-3x3-gap',
+                'image' => 'services/wall-finishes.jpg',
 
                 'sort_order' => 5,
                 'is_active' => true,
             ],
 
-            /*
-            |--------------------------------------------------------------------------
-            | 6. GRC Columns
-            |--------------------------------------------------------------------------
-            */
-
             [
-                'title_ar' => 'أعمدة GRC مكة',
-                'title_en' => 'GRC Makkah Columns',
+                'title_ar' => 'المرايات والديكورات الزجاجية',
+                'title_en' => 'Mirrors & Glass Decor',
 
-                'slug' => 'grc-makkah-columns',
+                'slug' => 'mirrors-glass-decor',
 
                 'short_description_ar' =>
-                    'تصميم وتصنيع وتركيب أعمدة GRC مكة للواجهات ومداخل الفلل والقصور والمباني والمشروعات التجارية.',
+                    'تصميم وتنفيذ مرايات وديكورات زجاجية تضيف اتساعًا وإضاءة وأناقة للمداخل والجدران والمساحات الداخلية.',
 
                 'short_description_en' =>
-                    'Design, manufacturing, and installation of GRC Makkah columns for facades, entrances, villas, palaces, and commercial projects.',
+                    'Custom mirrors and glass decor that enhance space, light, and elegance across entrances, walls, and interiors.',
 
                 'description_ar' =>
-                    'تنفذ شركة جي آر سي مكة أعمدة GRC معمارية بمقاسات وتصميمات متنوعة لتناسب مداخل الفلل والقصور والواجهات والمباني المختلفة في مكة المكرمة.
+                    'ننفذ المرايات والديكورات الزجاجية بتصاميم عصرية تناسب المداخل والجدران وغرف النوم والمجالس والمساحات الداخلية المختلفة.
 
-                    يمكن تنفيذ أعمدة GRC مكة بأشكال كلاسيكية أو مودرن أو حسب التصميم المعماري للمشروع، مع الاهتمام بالتناسب بين الأعمدة وباقي عناصر الواجهة.
+                    يتم اختيار شكل المرآة وحجمها وإطارها وطريقة توزيعها بما يتناسب مع التصميم الداخلي والمساحة.
 
-                    نقدم خدمات القياس والتصنيع والتوريد والتركيب والتشطيب لضمان الحصول على أعمدة GRC مكة متناسقة وذات مظهر معماري احترافي.
+                    يمكن دمج المرايات مع التكسيات الجدارية والإضاءة والعناصر الديكورية للحصول على نتيجة أكثر فخامة واتساعًا.
 
-                    يتم تنفيذ كل عنصر وفق متطلبات المشروع والتصميم والمقاسات المحددة.',
+                    نهتم بدقة المقاسات والتفاصيل النهائية لضمان تناسق المرايات مع المكان.',
 
                 'description_en' =>
-                    'GRC Makkah designs, manufactures, and installs architectural GRC columns for villa entrances, palaces, facades, residential buildings, and commercial projects.
+                    'We design and install custom mirrors and glass decor for entrances, walls, bedrooms, majlis spaces, and other interiors.
 
-                    Columns can be produced in classic, modern, or customized designs according to the architectural requirements of each project in Makkah.
+                    Mirror shapes, sizes, frames, and layouts are selected to complement the interior design and available space.
 
-                    Our GRC Makkah column service covers measurement, manufacturing, supply, installation, and finishing.
+                    Mirrors can be combined with wall finishes, lighting, and decorative elements to create a more spacious and refined interior.
 
-                    Each element is produced according to project requirements, architectural design, and specified dimensions.',
+                    We pay close attention to measurements and finishing details to achieve a seamless result.',
 
-                'icon' => 'bi bi-columns-gap',
-                'image' => 'services/grc-columns.jpg',
+                'icon' => 'bi bi-stars',
+                'image' => 'services/mirrors-glass-decor.jpg',
 
                 'sort_order' => 6,
                 'is_active' => true,
             ],
 
-            /*
-            |--------------------------------------------------------------------------
-            | 7. GRC Arches & Domes
-            |--------------------------------------------------------------------------
-            */
-
             [
-                'title_ar' => 'أقواس وقباب GRC مكة',
-                'title_en' => 'GRC Makkah Arches & Domes',
+                'title_ar' => 'تصميم وتنفيذ المداخل',
+                'title_en' => 'Entrance Design & Execution',
 
-                'slug' => 'grc-makkah-arches-domes',
+                'slug' => 'entrance-design-execution',
 
                 'short_description_ar' =>
-                    'تنفيذ أقواس وقباب GRC مكة وعناصر معمارية مميزة للفلل والقصور والمداخل والمشروعات المعمارية.',
+                    'تصميم وتنفيذ مداخل مودرن وفاخرة تعطي المنزل انطباعًا أول مميزًا وتتناسب مع الهوية الداخلية للمكان.',
 
                 'short_description_en' =>
-                    'Custom GRC Makkah arches, domes, and architectural elements for villas, palaces, entrances, and architectural projects.',
+                    'Modern and elegant entrance designs that create a distinctive first impression and complement the interior identity of the home.',
 
                 'description_ar' =>
-                    'تقدم شركة جي آر سي مكة تنفيذ أقواس وقباب GRC مكة وعناصر معمارية خاصة تضيف طابعًا مميزًا للواجهات والمداخل والفلل والقصور في مكة المكرمة.
+                    'نقدم تصميم وتنفيذ المداخل الداخلية للمنازل والفلل بأسلوب عصري وأنيق يعكس شخصية المكان منذ اللحظة الأولى.
 
-                    يتم تنفيذ القباب والأقواس وفق التصميم والمقاسات المطلوبة مع مراعاة التناسق الهندسي ودقة التصنيع والتركيب والتشطيب.
+                    تشمل التصاميم التكسيات الجدارية والمرايات والإضاءة والكونسول والخزائن والعناصر الديكورية حسب مساحة المدخل.
 
-                    تشمل حلول جي آر سي مكة تنفيذ العناصر المناسبة للتصميمات الكلاسيكية والفاخرة والمشروعات التي تحتاج إلى تفاصيل معمارية مميزة.
+                    نهتم باستغلال المساحات الصغيرة والكبيرة بطريقة عملية مع الحفاظ على المظهر الراقي والمتناسق.
 
-                    يتم تجهيز كل عنصر وفق أبعاد المشروع والطابع المعماري العام للواجهة.',
+                    يتم تصميم المدخل بما يتناسب مع باقي الديكور الداخلي للمنزل.',
 
                 'description_en' =>
-                    'GRC Makkah provides custom arches, domes, and architectural elements for distinctive facades, entrances, villas, and palaces in Makkah.
+                    'We design and execute elegant entrances for homes and villas, creating a distinctive first impression while reflecting the character of the interior.
 
-                    All GRC Makkah arches and domes are manufactured according to project dimensions and designs with attention to geometry, installation accuracy, and finishing.
+                    Designs may include wall finishes, mirrors, lighting, consoles, cabinets, and decorative elements according to the entrance space.
 
-                    Our solutions are suitable for classic, luxury, and customized architectural projects requiring distinctive architectural details.
+                    We make practical use of both small and large spaces while maintaining a refined and cohesive appearance.
 
-                    Each element is prepared according to project dimensions and the overall architectural style.',
+                    Each entrance is designed to complement the overall interior style of the home.',
 
-                'icon' => 'bi bi-circle',
-                'image' => 'services/grc-arches-domes.jpg',
+                'icon' => 'bi bi-door-open',
+                'image' => 'services/entrance-design.jpg',
 
                 'sort_order' => 7,
                 'is_active' => true,
             ],
 
-            /*
-            |--------------------------------------------------------------------------
-            | 8. Custom GRC
-            |--------------------------------------------------------------------------
-            */
-
             [
-                'title_ar' => 'تصنيع GRC مكة حسب التصميم',
-                'title_en' => 'Custom GRC Makkah Manufacturing',
+                'title_ar' => 'تصميم ركن كوفي',
+                'title_en' => 'Coffee Corner Design',
 
-                'slug' => 'custom-grc-makkah-manufacturing',
+                'slug' => 'coffee-corner-design',
 
                 'short_description_ar' =>
-                    'تصنيع عناصر GRC مكة مخصصة حسب الرسومات الهندسية والمقاسات والتصميم المعماري لكل مشروع.',
+                    'تصميم وتنفيذ أركان كوفي مودرن داخل المنزل بتفاصيل عملية وأنيقة واستغلال ذكي للمساحة.',
 
                 'short_description_en' =>
-                    'Custom GRC Makkah elements manufactured according to architectural drawings, dimensions, and project requirements.',
+                    'Modern home coffee corners designed with practical details, elegant finishes, and smart use of available space.',
 
                 'description_ar' =>
-                    'توفر شركة جي آر سي مكة خدمة تصنيع عناصر GRC حسب التصميم والرسومات الهندسية الخاصة بالمشروع، سواء كانت واجهات أو كرانيش أو أعمدة أو أقواس أو زخارف أو عناصر معمارية خاصة.
+                    'نصمم وننفذ أركان كوفي داخل المنازل والفلل بطريقة عصرية تضيف لمسة مميزة للمكان وتستغل المساحة المتاحة بشكل ذكي.
 
-                    نبدأ بدراسة التصميم والمقاسات المطلوبة ثم تجهيز العناصر للتصنيع والتركيب بما يتناسب مع طبيعة المشروع وموقعه في مكة المكرمة.
+                    يتم تصميم الركن حسب المساحة والموقع مع اختيار الخامات والألوان والإضاءة ووحدات التخزين المناسبة.
 
-                    خدمة تصنيع GRC مكة حسب التصميم مناسبة للمشروعات التي تحتاج إلى عناصر خاصة أو تصميمات غير تقليدية يتم تنفيذها وفق رؤية المهندس أو المصمم ومتطلبات العميل.
+                    يمكن تنفيذ ركن الكوفي داخل المطبخ أو المجلس أو غرفة المعيشة أو أي مساحة مناسبة داخل المنزل.
 
-                    نحرص على دقة التفاصيل والأبعاد والتناسق بين العناصر للحصول على نتيجة متوافقة مع التصميم المعماري.',
+                    الهدف هو الحصول على ركن عملي وأنيق ينسجم مع الديكور الداخلي للمكان.',
 
                 'description_en' =>
-                    'GRC Makkah provides customized GRC manufacturing according to architectural drawings, project dimensions, and design requirements.
+                    'We design and execute modern home coffee corners that add character while making smart use of available space.
 
-                    Custom elements may include facades, cornices, columns, arches, decorative panels, and unique architectural details.
+                    Each corner is planned according to its location and dimensions, with suitable materials, colors, lighting, and storage solutions.
 
-                    This GRC Makkah service is suitable for projects requiring customized or non-standard elements based on the architect’s design and client requirements.
+                    Coffee corners can be integrated into kitchens, majlis spaces, living rooms, or other suitable areas.
 
-                    We focus on dimensional accuracy, architectural details, and consistency between all manufactured elements.',
+                    The goal is to create a practical and elegant feature that blends naturally with the surrounding interior.',
 
-                'icon' => 'bi bi-vector-pen',
-                'image' => 'services/custom-grc.jpg',
+                'icon' => 'bi bi-cup-hot',
+                'image' => 'services/coffee-corner.jpg',
 
                 'sort_order' => 8,
                 'is_active' => true,
             ],
 
-            /*
-            |--------------------------------------------------------------------------
-            | 9. Architectural Facades
-            |--------------------------------------------------------------------------
-            */
-
             [
-                'title_ar' => 'الواجهات المعمارية GRC مكة',
-                'title_en' => 'GRC Makkah Architectural Facades',
+                'title_ar' => 'ترميم وتجديد المنازل',
+                'title_en' => 'Home Renovation & Remodeling',
 
-                'slug' => 'grc-makkah-architectural-decorative-facades',
+                'slug' => 'home-renovation-remodeling',
 
                 'short_description_ar' =>
-                    'تنفيذ واجهات معمارية وديكورية GRC مكة للمباني والفلل والمشروعات التجارية والإدارية في مكة.',
+                    'تجديد وترميم المنازل وتحديث المساحات الداخلية من خلال تطوير التشطيبات والديكورات وإعادة تنظيم التصميم.',
 
                 'short_description_en' =>
-                    'Complete GRC Makkah architectural and decorative facades for buildings, villas, commercial, and administrative projects.',
+                    'Home renovation and remodeling services that refresh interiors through updated finishes, decoration, and improved space planning.',
 
                 'description_ar' =>
-                    'تقدم شركة جي آر سي مكة تنفيذ الواجهات المعمارية والديكورية للمباني الجديدة وأعمال تطوير وتجديد الواجهات في مكة المكرمة، مع توفير عناصر GRC والديكورات الخارجية المناسبة للتصميم.
+                    'نقدم خدمات ترميم وتجديد المنازل وتحديث الديكورات الداخلية في الدمام والخبر والقطيف، مع حلول تناسب المنازل القائمة والمساحات التي تحتاج إلى تطوير.
 
-                    نساعد في تنفيذ واجهات GRC مكة التي تجمع بين الشكل الجمالي والهوية المعمارية للمشروع، مع الاهتمام بالتفاصيل والتناسق بين جميع العناصر الخارجية.
+                    تشمل الأعمال تحديث الجدران والأسقف والتكسيات والإضاءة والديكورات وإعادة تنظيم بعض المساحات بما يتناسب مع الاستخدام الحالي.
 
-                    تشمل الخدمة الواجهات السكنية والتجارية والإدارية وواجهات الفلل والقصور والمداخل والمشروعات الخاصة.
+                    نساعد على تحويل المساحات القديمة إلى تصاميم عصرية ومريحة دون الحاجة إلى تغيير كل عناصر المنزل.
 
-                    يتم تنفيذ عناصر الواجهة وفق التصميم والمقاسات المطلوبة مع الاهتمام بجودة التصنيع والتركيب والتشطيب النهائي.',
+                    يتم تنفيذ أعمال التجديد وفق حالة المكان ومتطلبات العميل والنتيجة التصميمية المطلوبة.',
 
                 'description_en' =>
-                    'GRC Makkah provides architectural and decorative facade solutions for new buildings as well as facade renovation and enhancement projects in Makkah.
+                    'We provide home renovation and remodeling services in Dammam, Khobar, and Qatif for existing homes that need updated interiors and improved functionality.
 
-                    Our GRC Makkah facade solutions combine architectural identity, aesthetic design, exterior decorations, and professional finishing.
+                    Services may include updated walls, ceilings, finishes, lighting, decoration, and improved space planning.
 
-                    We serve residential, commercial, administrative, villa, palace, entrance, and private architectural projects.
+                    We help transform outdated interiors into modern and comfortable spaces without necessarily replacing every element of the home.
 
-                    Facade elements are produced according to project designs and dimensions with a strong focus on manufacturing, installation, and final finishing quality.',
+                    Renovation work is planned according to the existing condition, client requirements, and desired design outcome.',
 
-                'icon' => 'bi bi-layout-text-window',
-                'image' => 'services/architectural-facades.jpg',
+                'icon' => 'bi bi-arrow-repeat',
+                'image' => 'services/home-renovation.jpg',
 
                 'sort_order' => 9,
                 'is_active' => true,
             ],
 
-            /*
-            |--------------------------------------------------------------------------
-            | 10. GRC Installation
-            |--------------------------------------------------------------------------
-            */
-
             [
-                'title_ar' => 'تركيب وتثبيت أعمال GRC مكة',
-                'title_en' => 'GRC Makkah Installation & Fixing',
+                'title_ar' => 'تنسيق وتجديد الديكور الداخلي',
+                'title_en' => 'Interior Decor Refresh',
 
-                'slug' => 'grc-makkah-installation-fixing',
+                'slug' => 'interior-decor-refresh',
 
                 'short_description_ar' =>
-                    'تركيب وتثبيت عناصر GRC مكة والواجهات والديكورات الخارجية بدقة واحترافية وفق متطلبات المشروع.',
+                    'تجديد وتنسيق الديكور الداخلي للمساحات القائمة لإعطائها مظهرًا عصريًا جديدًا دون تغيير كامل للمكان.',
 
                 'short_description_en' =>
-                    'Professional installation and fixing of GRC Makkah facades and exterior architectural elements.',
+                    'Interior decor refresh services that give existing spaces a modern new look without requiring a complete renovation.',
 
                 'description_ar' =>
-                    'تقدم شركة جي آر سي مكة خدمات تركيب وتثبيت أعمال GRC والواجهات والديكورات الخارجية في مكة المكرمة، مع مراعاة دقة المحاذاة والتثبيت وتناسق العناصر مع التصميم المعماري.
+                    'نقدم حلولًا لتجديد وتنسيق الديكور الداخلي للمنازل والمساحات القائمة التي تحتاج إلى تغيير في الشكل أو تحسين في التفاصيل.
 
-                    تشمل أعمال تركيب GRC مكة واجهات GRC والكرانيش والأعمدة والأقواس والقباب والإطارات والزخارف والعناصر المخصصة.
+                    يمكن أن يشمل التجديد تغيير التكسيات والدهانات والإضاءة والمرايات وديكورات التلفزيون والخزائن وبعض العناصر الداخلية حسب احتياجات المكان.
 
-                    نحرص على تنفيذ أعمال التركيب باحترافية بداية من تجهيز الموقع وحتى تركيب العناصر والتشطيب النهائي وتسليم الأعمال.
+                    نركز على تحقيق أكبر تأثير بصري ممكن من خلال تغييرات مدروسة ومتناسقة مع التصميم الحالي.
 
-                    يتم الاهتمام بتناسق جميع عناصر الواجهة وجودة التثبيت ودقة التنفيذ للحصول على نتيجة متوافقة مع التصميم المعماري للمشروع.',
+                    هذه الخدمة مناسبة لمن يرغب في تحديث شكل منزله والحصول على مظهر عصري دون تنفيذ تجديد شامل.',
 
                 'description_en' =>
-                    'GRC Makkah provides professional installation and fixing services for GRC facades and exterior architectural elements in Makkah.
+                    'We provide interior decor refresh solutions for existing homes and spaces that need a new look or improved visual details.
 
-                    Installation includes GRC facades, cornices, columns, arches, domes, frames, decorative elements, and customized components.
+                    Updates may include wall finishes, paint, lighting, mirrors, TV walls, wardrobes, and selected interior elements according to the space requirements.
 
-                    We focus on accurate alignment, secure fixing, architectural consistency, and professional final finishing from site preparation to project completion.
+                    We focus on creating a noticeable visual transformation through carefully planned and coordinated improvements.
 
-                    Every installation is handled according to the architectural design and project requirements.',
+                    This service is ideal for homeowners who want a modern update without a complete renovation.',
 
-                'icon' => 'bi bi-tools',
-                'image' => 'services/grc-installation.jpg',
+                'icon' => 'bi bi-magic',
+                'image' => 'services/interior-decor-refresh.jpg',
 
                 'sort_order' => 10,
                 'is_active' => true,

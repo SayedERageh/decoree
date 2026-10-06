@@ -18,7 +18,7 @@
     </main>
 
     @include('includes.footer')
-
+@include('components.home.contact-buttons')
     @include('includes.scripts')
 
 </body>

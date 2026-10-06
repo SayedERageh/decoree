@@ -19,26 +19,26 @@ class SiteSettingsSeeder extends Seeder
         SiteSetting::updateOrCreate(
             ['id' => 1],
             [
-                'site_name' => 'جي آر سي مكة | GRC Makkah',
+                'site_name' => 'دمام ديكور | Dammam Decor',
 
-                'primary_color' => '#b08d57',
-                'primary_dark_color' => '#8a6a3f',
+                'primary_color' => '#ffffff',
+                'primary_dark_color' => '#d9d9d9',
 
-                'secondary_color' => '#111111',
-                'secondary_dark_color' => '#1c1c1c',
+                'secondary_color' => '#080808',
+                'secondary_dark_color' => '#111111',
 
-                'light_blue_color' => '#f5f1e8',
+                'light_blue_color' => '#f2f2f2',
                 'light_color' => '#f8f8f8',
 
                 'white_color' => '#ffffff',
 
-                'text_color' => '#222222',
-                'muted_color' => '#6b6b6b',
+                'text_color' => '#111111',
+                'muted_color' => '#777777',
 
-                'border_color' => '#e5e0d7',
+                'border_color' => '#dedede',
 
                 'site_description' =>
-                    'جي آر سي مكة | GRC Makkah شركة متخصصة في أعمال GRC والواجهات المعمارية والديكورات الخارجية في مكة المكرمة، وتشمل خدماتنا تصنيع وتركيب واجهات GRC والكرانيش والأعمدة والأقواس والقباب والعناصر المعمارية للفلل والقصور والمباني والمشروعات المختلفة.',
+                    'دمام ديكور | Dammam Decor شركة متخصصة في تصميم وتنفيذ الديكور الداخلي وتجديد المنازل والفلل في الدمام والخبر والقطيف، وتشمل خدماتنا ديكورات التلفزيون والخزائن وغرف النوم والمرايات والتكسيات الجدارية والمداخل وأركان الكوفي والترميم والتجديد.',
             ]
         );
 
@@ -59,34 +59,34 @@ class SiteSettingsSeeder extends Seeder
 
             'home' => [
                 'title_ar' =>
-                    'جي آر سي مكة | شركة GRC مكة للواجهات والديكورات الخارجية',
+                    'دمام ديكور | تصميم وتنفيذ الديكور الداخلي في الدمام والخبر والقطيف',
 
                 'title_en' =>
-                    'GRC Makkah | GRC Facades & Exterior Decorations Company',
+                    'Dammam Decor | Interior Design & Home Renovation',
 
                 'description_ar' =>
-                    'جي آر سي مكة شركة متخصصة في أعمال GRC مكة والواجهات المعمارية والديكورات الخارجية في مكة المكرمة. تصنيع وتركيب واجهات GRC والكرانيش والأعمدة والأقواس والقباب وعناصر GRC للفلل والقصور والمباني.',
+                    'دمام ديكور شركة متخصصة في تصميم وتنفيذ الديكور الداخلي وتجديد المنازل والفلل في الدمام والخبر والقطيف. نقدم ديكورات تلفزيون، غرف نوم، خزائن، مرايات، تكسيات جدارية، مداخل، أركان كوفي وترميم المنازل.',
 
                 'description_en' =>
-                    'GRC Makkah specializes in GRC works, architectural facades, and exterior decorations in Makkah, Saudi Arabia, including GRC facades, cornices, columns, arches, domes, and custom architectural elements.',
+                    'Dammam Decor specializes in interior design and home renovation in Dammam, Khobar, and Qatif, offering TV wall designs, bedrooms, wardrobes, mirrors, wall finishes, entrances, coffee corners, and complete interior solutions.',
 
                 'keywords_ar' =>
-                    'جي آر سي مكة, GRC مكة, GRC Makkah, شركة GRC في مكة, شركة جي آر سي مكة, أعمال GRC مكة, واجهات GRC مكة, ديكورات GRC مكة, ديكورات خارجية مكة, واجهات معمارية مكة, مقاول GRC مكة, تركيب GRC مكة, تصنيع GRC مكة, كرانيش GRC مكة, أعمدة GRC مكة, قباب GRC مكة, أقواس GRC مكة, واجهات فلل مكة, واجهات قصور مكة',
+                    'دمام ديكور, ديكور الدمام, تصميم داخلي الدمام, شركة ديكور الدمام, ديكورات الدمام, تنفيذ ديكور الدمام, ديكور الخبر, ديكور القطيف, تصميم داخلي الخبر, تصميم داخلي القطيف, تجديد منازل الدمام, ترميم منازل الدمام, ديكورات تلفزيون الدمام, خزائن الدمام, غرف نوم الدمام, تكسيات جدارية الدمام, مداخل الدمام, ركن كوفي الدمام',
 
                 'keywords_en' =>
-                    'GRC Makkah, GRC company Makkah, GRC contractor Makkah, GRC facades Makkah, GRC works Makkah, exterior decorations Makkah, architectural facades Makkah, GRC installation Makkah, GRC manufacturing Makkah, villa facades Makkah, palace facades Makkah',
+                    'Dammam Decor, interior design Dammam, interior design company Dammam, home renovation Dammam, home decor Dammam, interior design Khobar, interior design Qatif, TV wall Dammam, wardrobes Dammam, bedroom design Dammam, wall finishes Dammam, home renovation Khobar',
 
                 'og_title_ar' =>
-                    'جي آر سي مكة | أعمال GRC والواجهات والديكورات الخارجية',
+                    'دمام ديكور | ديكور داخلي وتجديد المنازل',
 
                 'og_title_en' =>
-                    'GRC Makkah | GRC Facades & Exterior Decorations',
+                    'Dammam Decor | Interior Design & Home Renovation',
 
                 'og_description_ar' =>
-                    'حلول متكاملة من جي آر سي مكة لأعمال GRC والواجهات المعمارية والديكورات الخارجية للفلل والقصور والمباني في مكة المكرمة.',
+                    'حلول متكاملة من دمام ديكور لتصميم وتنفيذ الديكور الداخلي وتجديد المنازل والفلل في الدمام والخبر والقطيف.',
 
                 'og_description_en' =>
-                    'Complete GRC Makkah solutions for GRC works, architectural facades, and exterior decorations for villas, palaces, and buildings in Makkah.',
+                    'Complete interior design and home renovation solutions by Dammam Decor in Dammam, Khobar, and Qatif.',
             ],
 
 
@@ -98,34 +98,34 @@ class SiteSettingsSeeder extends Seeder
 
             'about' => [
                 'title_ar' =>
-                    'من نحن | جي آر سي مكة | شركة GRC مكة',
+                    'من نحن | دمام ديكور | للديكور الداخلي وتجديد المنازل',
 
                 'title_en' =>
-                    'About Us | GRC Makkah',
+                    'About Us | Dammam Decor',
 
                 'description_ar' =>
-                    'تعرف على جي آر سي مكة وخدمات شركة GRC مكة في أعمال GRC والواجهات المعمارية والديكورات الخارجية وتصنيع وتركيب العناصر المعمارية للفلل والقصور والمباني في مكة المكرمة.',
+                    'تعرف على دمام ديكور وخدماتنا في تصميم وتنفيذ الديكور الداخلي وتجديد وترميم المنازل والفلل في الدمام والخبر والقطيف، مع حلول عصرية ومخصصة لكل مساحة.',
 
                 'description_en' =>
-                    'Learn about GRC Makkah and our services in GRC works, architectural facades, exterior decorations, and custom GRC architectural elements for villas, palaces, and buildings in Makkah.',
+                    'Learn about Dammam Decor and our interior design, home renovation, and remodeling services for homes and villas in Dammam, Khobar, and Qatif.',
 
                 'keywords_ar' =>
-                    'من نحن جي آر سي مكة, جي آر سي مكة, GRC مكة, شركة GRC مكة, شركة GRC في مكة, أعمال GRC مكة, واجهات GRC مكة, ديكورات GRC مكة, مقاول GRC مكة',
+                    'من نحن دمام ديكور, دمام ديكور, شركة ديكور الدمام, تصميم داخلي الدمام, تنفيذ ديكور الدمام, تجديد منازل الدمام, ترميم منازل الدمام, ديكور الخبر, ديكور القطيف',
 
                 'keywords_en' =>
-                    'about GRC Makkah, GRC Makkah company, GRC company Makkah, GRC contractor Makkah, GRC facades Makkah, exterior decorations Makkah',
+                    'about Dammam Decor, Dammam Decor company, interior design Dammam, home renovation Dammam, interior design Khobar, interior design Qatif',
 
                 'og_title_ar' =>
-                    'من نحن | جي آر سي مكة',
+                    'من نحن | دمام ديكور',
 
                 'og_title_en' =>
-                    'About GRC Makkah',
+                    'About Dammam Decor',
 
                 'og_description_ar' =>
-                    'تعرف على جي آر سي مكة وخبرتنا في تنفيذ أعمال GRC والواجهات والديكورات الخارجية في مكة المكرمة.',
+                    'تعرف على دمام ديكور وخبرتنا في تصميم وتنفيذ الديكور الداخلي وتجديد المنازل في المنطقة الشرقية.',
 
                 'og_description_en' =>
-                    'Discover GRC Makkah and our expertise in GRC works, architectural facades, and exterior decorations in Makkah.',
+                    'Discover Dammam Decor and our experience in interior design and home renovation across the Eastern Province.',
             ],
 
 
@@ -137,34 +137,34 @@ class SiteSettingsSeeder extends Seeder
 
             'services' => [
                 'title_ar' =>
-                    'خدمات جي آر سي مكة | واجهات وديكورات GRC مكة',
+                    'خدمات دمام ديكور | تصميم وتنفيذ الديكور الداخلي',
 
                 'title_en' =>
-                    'GRC Makkah Services | Facades & Exterior Decorations',
+                    'Dammam Decor Services | Interior Design & Home Renovation',
 
                 'description_ar' =>
-                    'اكتشف خدمات جي آر سي مكة في تصنيع وتركيب واجهات GRC مكة والديكورات الخارجية والكرانيش والأعمدة والأقواس والقباب والعناصر المعمارية حسب التصميم في مكة المكرمة.',
+                    'اكتشف خدمات دمام ديكور في تصميم وتنفيذ الديكور الداخلي وتجديد المنازل، بما يشمل ديكورات التلفزيون وغرف النوم والخزائن والمرايات والتكسيات والمداخل وأركان الكوفي والترميم.',
 
                 'description_en' =>
-                    'Explore GRC Makkah services including GRC facades, exterior decorations, cornices, columns, arches, domes, installation, manufacturing, and custom architectural elements.',
+                    'Explore Dammam Decor services including interior design, TV walls, bedrooms, wardrobes, mirrors, wall finishes, entrances, coffee corners, home renovation, and complete interior solutions.',
 
                 'keywords_ar' =>
-                    'خدمات جي آر سي مكة, خدمات GRC مكة, أعمال GRC مكة, واجهات GRC مكة, تركيب GRC مكة, تصنيع GRC مكة, ديكورات GRC مكة, ديكورات خارجية مكة, كرانيش GRC مكة, أعمدة GRC مكة, قباب GRC مكة, أقواس GRC مكة, واجهات فلل مكة, واجهات قصور مكة, شركة GRC في مكة',
+                    'خدمات دمام ديكور, خدمات الديكور الدمام, تصميم داخلي الدمام, تنفيذ ديكور الدمام, ديكورات تلفزيون الدمام, غرف نوم الدمام, خزائن الدمام, مرايات الدمام, تكسيات جدارية الدمام, مداخل الدمام, ركن كوفي الدمام, ترميم منازل الدمام, تجديد منازل الدمام, ديكور الخبر, ديكور القطيف',
 
                 'keywords_en' =>
-                    'GRC Makkah services, GRC works Makkah, GRC facades Makkah, GRC installation Makkah, GRC manufacturing Makkah, exterior decorations Makkah, GRC cornices Makkah, GRC columns Makkah, GRC domes Makkah, GRC arches Makkah',
+                    'Dammam Decor services, interior design Dammam, home renovation Dammam, TV wall design Dammam, bedroom design Dammam, wardrobes Dammam, mirrors Dammam, wall finishes Dammam, entrance design Dammam, coffee corner Dammam',
 
                 'og_title_ar' =>
-                    'خدمات جي آر سي مكة | GRC Makkah',
+                    'خدمات دمام ديكور | Dammam Decor',
 
                 'og_title_en' =>
-                    'GRC Makkah Services',
+                    'Dammam Decor Services',
 
                 'og_description_ar' =>
-                    'خدمات متكاملة من جي آر سي مكة في أعمال GRC والواجهات المعمارية والديكورات الخارجية والتصنيع والتركيب.',
+                    'خدمات متكاملة لتصميم وتنفيذ الديكور الداخلي وتجديد المنازل والفلل في الدمام والخبر والقطيف.',
 
                 'og_description_en' =>
-                    'Complete GRC Makkah services including GRC works, architectural facades, exterior decorations, manufacturing, and installation.',
+                    'Complete interior design and home renovation services for homes and villas in Dammam, Khobar, and Qatif.',
             ],
 
 
@@ -176,34 +176,34 @@ class SiteSettingsSeeder extends Seeder
 
             'projects' => [
                 'title_ar' =>
-                    'مشروعات جي آر سي مكة | أعمال GRC والواجهات',
+                    'أعمال دمام ديكور | مشاريع الديكور الداخلي وتجديد المنازل',
 
                 'title_en' =>
-                    'GRC Makkah Projects | GRC Facades & Exterior Decorations',
+                    'Dammam Decor Projects | Interior Design & Renovation',
 
                 'description_ar' =>
-                    'شاهد مشروعات جي آر سي مكة وأعمال GRC والواجهات المعمارية والديكورات الخارجية للفلل والقصور والمباني والمشروعات المختلفة في مكة المكرمة.',
+                    'شاهد أعمال ومشاريع دمام ديكور في تصميم وتنفيذ الديكور الداخلي وتجديد المنازل والفلل، بما يشمل ديكورات التلفزيون وغرف النوم والخزائن والتكسيات والمداخل في الدمام والخبر والقطيف.',
 
                 'description_en' =>
-                    'Explore GRC Makkah projects featuring GRC facades, architectural elements, and exterior decorations for villas, palaces, buildings, and architectural projects in Makkah.',
+                    'Explore Dammam Decor projects in interior design, home renovation, TV walls, bedrooms, wardrobes, wall finishes, entrances, and complete interior solutions across Dammam, Khobar, and Qatif.',
 
                 'keywords_ar' =>
-                    'مشروعات جي آر سي مكة, مشاريع GRC مكة, أعمال GRC مكة, مشاريع GRC في مكة, واجهات GRC مكة, مشروعات واجهات مكة, ديكورات GRC مكة, ديكورات خارجية مكة, واجهات فلل مكة, واجهات قصور مكة, مشاريع معمارية مكة',
+                    'أعمال دمام ديكور, مشاريع ديكور الدمام, مشاريع الديكور الداخلي الدمام, تصميم داخلي الدمام, تنفيذ ديكور الدمام, مشاريع ديكور الخبر, مشاريع ديكور القطيف, ديكورات فلل الدمام, تجديد منازل الدمام, ديكورات تلفزيون الدمام, غرف نوم الدمام, خزائن الدمام',
 
                 'keywords_en' =>
-                    'GRC Makkah projects, GRC projects Makkah, GRC facade projects Makkah, architectural facade projects Makkah, exterior decoration projects Makkah, villa facades Makkah, palace facades Makkah',
+                    'Dammam Decor projects, interior design projects Dammam, home renovation projects Dammam, villa interior design Dammam, interior design Khobar, interior design Qatif, TV wall projects Dammam, bedroom design projects Dammam',
 
                 'og_title_ar' =>
-                    'مشروعاتنا | جي آر سي مكة',
+                    'أعمالنا | دمام ديكور',
 
                 'og_title_en' =>
-                    'GRC Makkah Projects',
+                    'Dammam Decor Projects',
 
                 'og_description_ar' =>
-                    'استعرض مشروعات وأعمال جي آر سي مكة في الواجهات المعمارية وديكورات GRC والواجهات الخارجية في مكة المكرمة.',
+                    'استعرض أعمال دمام ديكور في تصميم وتنفيذ الديكور الداخلي وتجديد المنازل والفلل في الدمام والخبر والقطيف.',
 
                 'og_description_en' =>
-                    'Explore GRC Makkah projects in architectural facades, GRC decorations, and exterior architectural works in Makkah.',
+                    'Explore Dammam Decor projects in interior design and home renovation across Dammam, Khobar, and Qatif.',
             ],
 
 
@@ -215,34 +215,34 @@ class SiteSettingsSeeder extends Seeder
 
             'contact' => [
                 'title_ar' =>
-                    'تواصل مع جي آر سي مكة | شركة GRC في مكة',
+                    'تواصل مع دمام ديكور | تصميم وتنفيذ الديكور الداخلي',
 
                 'title_en' =>
-                    'Contact GRC Makkah | GRC Company in Makkah',
+                    'Contact Dammam Decor | Interior Design & Home Renovation',
 
                 'description_ar' =>
-                    'تواصل مع جي آر سي مكة للحصول على استشارة أو طلب عرض سعر لأعمال GRC مكة والواجهات والديكورات الخارجية وواجهات الفلل والقصور والمباني في مكة المكرمة.',
+                    'تواصل مع دمام ديكور لطلب استشارة أو عرض سعر لتصميم وتنفيذ الديكور الداخلي وتجديد المنازل والفلل في الدمام والخبر والقطيف.',
 
                 'description_en' =>
-                    'Contact GRC Makkah for a consultation or quotation for GRC works, architectural facades, exterior decorations, villa facades, palace facades, and building projects in Makkah.',
+                    'Contact Dammam Decor for a consultation or quotation for interior design, home renovation, and custom interior solutions in Dammam, Khobar, and Qatif.',
 
                 'keywords_ar' =>
-                    'تواصل مع جي آر سي مكة, شركة GRC في مكة, شركة جي آر سي مكة, مقاول GRC مكة, طلب عرض سعر GRC مكة, تركيب GRC مكة, واجهات GRC مكة, ديكورات GRC مكة, ديكورات خارجية مكة, أعمال GRC مكة',
+                    'تواصل مع دمام ديكور, دمام ديكور, شركة ديكور الدمام, تصميم داخلي الدمام, طلب عرض سعر ديكور الدمام, تنفيذ ديكور الدمام, تجديد منازل الدمام, ترميم منازل الدمام, ديكور الخبر, ديكور القطيف',
 
                 'keywords_en' =>
-                    'contact GRC Makkah, GRC company in Makkah, GRC contractor Makkah, GRC quotation Makkah, GRC installation Makkah, GRC facades Makkah, exterior decorations Makkah',
+                    'contact Dammam Decor, Dammam Decor company, interior design Dammam, interior design quotation Dammam, home renovation Dammam, interior design Khobar, interior design Qatif',
 
                 'og_title_ar' =>
-                    'تواصل معنا | جي آر سي مكة',
+                    'تواصل معنا | دمام ديكور',
 
                 'og_title_en' =>
-                    'Contact GRC Makkah',
+                    'Contact Dammam Decor',
 
                 'og_description_ar' =>
-                    'اطلب عرض سعر أو استشارة من جي آر سي مكة لأعمال GRC والواجهات والديكورات الخارجية في مكة المكرمة.',
+                    'اطلب استشارة أو عرض سعر من دمام ديكور لتصميم وتنفيذ الديكور الداخلي وتجديد المنازل في الدمام والخبر والقطيف.',
 
                 'og_description_en' =>
-                    'Request a quotation or consultation from GRC Makkah for GRC works, facades, and exterior decorations in Makkah.',
+                    'Request a consultation or quotation from Dammam Decor for interior design and home renovation in Dammam, Khobar, and Qatif.',
             ],
         ];
 

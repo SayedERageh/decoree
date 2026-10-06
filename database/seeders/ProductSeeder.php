@@ -9,23 +9,21 @@ class ProductSeeder extends Seeder
 {
     public function run(): void
     {
-        Product::query()->delete();
-
         $products = [
 
             [
-                'name_ar' => 'واجهات GRC مكة',
-                'name_en' => 'GRC Makkah Architectural Facades',
+                'name_ar' => 'ديكورات التلفزيون',
+                'name_en' => 'TV Wall Designs',
 
-                'slug' => 'grc-makkah-architectural-facades',
+                'slug' => 'tv-wall-designs',
 
                 'description_ar' =>
-                    'تنفيذ واجهات GRC في مكة المكرمة للفلل والقصور والمباني السكنية والتجارية والإدارية، بتصميمات معمارية متنوعة وتشطيبات احترافية تجمع بين الجمال والمتانة ودقة التنفيذ.',
+                    'تصميم وتنفيذ ديكورات تلفزيون عصرية ومودرن تناسب مساحة المنزل، مع دمج الخامات والإضاءة والتفاصيل بطريقة أنيقة ومتناسقة.',
 
                 'description_en' =>
-                    'GRC Makkah architectural facades for villas, palaces, residential, commercial, and administrative buildings, combining elegant designs, durability, precision, and professional finishing.',
+                    'Modern TV wall designs tailored to each space, combining materials, lighting, and elegant details for a stylish and harmonious interior.',
 
-                'image' => 'products/grc-facades.jpg',
+                'image' => 'products/tv-wall-designs.jpg',
 
                 'price' => null,
 
@@ -35,18 +33,18 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'name_ar' => 'كرانيش GRC مكة وديكورات الواجهات',
-                'name_en' => 'GRC Makkah Cornices & Facade Decorations',
+                'name_ar' => 'غرف النوم',
+                'name_en' => 'Bedroom Designs',
 
-                'slug' => 'grc-makkah-cornices-facade-decorations',
+                'slug' => 'bedroom-designs',
 
                 'description_ar' =>
-                    'تصنيع وتركيب كرانيش GRC في مكة المكرمة وحليات وزخارف الواجهات لإضافة لمسة معمارية مميزة وتحسين الشكل الخارجي للفلل والقصور والمباني.',
+                    'تنفيذ غرف نوم بتصاميم عصرية ومريحة تجمع بين الأناقة والعملية، مع حلول مخصصة تناسب المساحة واحتياجات كل عميل.',
 
                 'description_en' =>
-                    'Manufacturing and installation of GRC cornices, trims, and facade decorations in Makkah, designed to enhance the exterior appearance of villas, palaces, and buildings.',
+                    'Modern bedroom designs that combine comfort, style, and functionality, with customized solutions tailored to each space and client needs.',
 
-                'image' => 'products/grc-cornices.jpg',
+                'image' => 'products/bedroom-designs.jpg',
 
                 'price' => null,
 
@@ -56,18 +54,18 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'name_ar' => 'أعمدة GRC مكة المعمارية',
-                'name_en' => 'GRC Makkah Architectural Columns',
+                'name_ar' => 'الخزائن المودرن',
+                'name_en' => 'Modern Wardrobes',
 
-                'slug' => 'grc-makkah-architectural-columns',
+                'slug' => 'modern-wardrobes',
 
                 'description_ar' =>
-                    'تنفيذ أعمدة GRC في مكة بتصميمات وأشكال معمارية مختلفة تناسب مداخل الفلل والقصور والمباني والمشروعات التجارية، مع إمكانية تنفيذ التصميم حسب الرسومات والمقاسات المطلوبة.',
+                    'تصميم وتنفيذ خزائن مودرن بتقسيمات عملية وتشطيبات أنيقة، مع استغلال المساحات بطريقة ذكية تناسب احتياجات المنزل.',
 
                 'description_en' =>
-                    'Architectural GRC columns in Makkah in various designs and styles for villa entrances, palaces, buildings, and commercial projects, with customized dimensions and designs.',
+                    'Modern wardrobes with practical layouts and elegant finishes, designed to make efficient use of space and meet the needs of each home.',
 
-                'image' => 'products/grc-columns.jpg',
+                'image' => 'products/modern-wardrobes.jpg',
 
                 'price' => null,
 
@@ -77,18 +75,18 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'name_ar' => 'قباب وأقواس GRC مكة',
-                'name_en' => 'GRC Makkah Domes & Arches',
+                'name_ar' => 'المرايات والديكورات',
+                'name_en' => 'Mirrors & Interior Decor',
 
-                'slug' => 'grc-makkah-domes-arches',
+                'slug' => 'mirrors-interior-decor',
 
                 'description_ar' =>
-                    'تنفيذ قباب وأقواس وعناصر معمارية من GRC في مكة المكرمة بتصميمات مميزة تناسب الفلل والقصور والمداخل والمباني ذات الطابع الكلاسيكي أو العصري.',
+                    'تنفيذ مرايات وديكورات داخلية بتصاميم أنيقة تضيف اتساعًا وجمالًا للمكان، مع إمكانية تنفيذ التصميم بما يتناسب مع كل مساحة.',
 
                 'description_en' =>
-                    'Custom GRC domes, arches, and architectural elements in Makkah for villas, palaces, entrances, and classic or modern architectural projects.',
+                    'Elegant mirrors and interior decorations designed to enhance the sense of space and style, with customized designs for every interior.',
 
-                'image' => 'products/grc-domes-arches.jpg',
+                'image' => 'products/mirrors-interior-decor.jpg',
 
                 'price' => null,
 
@@ -98,18 +96,18 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'name_ar' => 'زخارف وديكورات GRC مكة الخارجية',
-                'name_en' => 'GRC Makkah Exterior Decorative Elements',
+                'name_ar' => 'تكسيات الجدران',
+                'name_en' => 'Wall Finishes',
 
-                'slug' => 'grc-makkah-exterior-decorative-elements',
+                'slug' => 'wall-finishes',
 
                 'description_ar' =>
-                    'تنفيذ زخارف وعناصر ديكورية خارجية من GRC في مكة المكرمة حسب التصميم المعماري للمشروع، لإضافة تفاصيل جمالية مميزة للواجهات والمداخل والمباني.',
+                    'تنفيذ تكسيات جدارية وبدائل وديكورات حائطية بتصاميم عصرية تضيف طابعًا مميزًا للمساحات الداخلية وتكمل الهوية البصرية للمكان.',
 
                 'description_en' =>
-                    'Custom GRC exterior decorative elements in Makkah designed according to each project’s architectural style to create distinctive facades, entrances, and buildings.',
+                    'Modern wall finishes and decorative wall solutions that add character to interior spaces and complement the overall style of the home.',
 
-                'image' => 'products/grc-exterior-decorations.jpg',
+                'image' => 'products/wall-finishes.jpg',
 
                 'price' => null,
 
@@ -119,18 +117,18 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'name_ar' => 'إطارات وبانوهات GRC مكة',
-                'name_en' => 'GRC Makkah Frames & Decorative Panels',
+                'name_ar' => 'مداخل واستقبالات',
+                'name_en' => 'Entrance & Reception Designs',
 
-                'slug' => 'grc-makkah-frames-decorative-panels',
+                'slug' => 'entrance-reception-designs',
 
                 'description_ar' =>
-                    'تصنيع إطارات وبانوهات وعناصر زخرفية من GRC للواجهات والمداخل في مكة المكرمة، بدقة عالية لتتناسب مع التصميم العام للمبنى وتمنحه مظهرًا معماريًا متناسقًا.',
+                    'تصميم وتنفيذ مداخل واستقبالات أنيقة بتفاصيل عصرية تعطي الانطباع الأول المميز وتتناسب مع طبيعة المنزل وأسلوب الديكور الداخلي.',
 
                 'description_en' =>
-                    'GRC frames, decorative panels, and architectural elements for facades and entrances in Makkah, manufactured with precision to complement the overall building design.',
+                    'Elegant entrance and reception designs with modern details that create a strong first impression and complement the home’s interior style.',
 
-                'image' => 'products/grc-frames-panels.jpg',
+                'image' => 'products/entrance-reception-designs.jpg',
 
                 'price' => null,
 
@@ -140,18 +138,18 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'name_ar' => 'ديكورات مداخل الفلل والقصور في مكة',
-                'name_en' => 'Villa & Palace Entrance Decorations in Makkah',
+                'name_ar' => 'تجديد وترميم المنازل',
+                'name_en' => 'Home Renovation & Remodeling',
 
-                'slug' => 'villa-palace-entrance-decorations-makkah',
+                'slug' => 'home-renovation-remodeling',
 
                 'description_ar' =>
-                    'تصميم وتنفيذ ديكورات ومداخل خارجية للفلل والقصور في مكة باستخدام عناصر GRC والكرانيش والأعمدة والأقواس والزخارف المعمارية لإظهار المدخل بصورة فاخرة ومميزة.',
+                    'تنفيذ أعمال تجديد وترميم المنازل وتحديث المساحات الداخلية من خلال تحسين التشطيبات والديكورات وإعادة تصميم المساحات بما يناسب الطابع العصري.',
 
                 'description_en' =>
-                    'Design and installation of luxury villa and palace entrance decorations in Makkah using GRC columns, cornices, arches, and architectural elements.',
+                    'Home renovation and remodeling services that refresh interiors through improved finishes, updated decoration, and modern space planning.',
 
-                'image' => 'products/villa-entrances.jpg',
+                'image' => 'products/home-renovation.jpg',
 
                 'price' => null,
 
@@ -161,18 +159,18 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'name_ar' => 'عناصر GRC مخصصة في مكة',
-                'name_en' => 'Custom GRC Architectural Elements in Makkah',
+                'name_ar' => 'ديكور داخلي متكامل',
+                'name_en' => 'Complete Interior Design',
 
-                'slug' => 'custom-grc-architectural-elements-makkah',
+                'slug' => 'complete-interior-design',
 
                 'description_ar' =>
-                    'تنفيذ عناصر GRC مخصصة في مكة المكرمة حسب الرسومات الهندسية والتصميمات المعمارية والمقاسات المطلوبة، مع إمكانية تنفيذ التفاصيل الخاصة بكل مشروع بدقة واحترافية.',
+                    'حلول متكاملة للديكور الداخلي تشمل التصميم والتنفيذ والتجديد وتنسيق مختلف عناصر المكان للوصول إلى مساحة متناسقة وأنيقة تعكس ذوق العميل.',
 
                 'description_en' =>
-                    'Custom GRC architectural elements in Makkah manufactured according to architectural drawings, designs, dimensions, and specific project requirements.',
+                    'Complete interior design solutions covering design, execution, renovation, and coordination of interior elements to create a cohesive and elegant space that reflects the client’s style.',
 
-                'image' => 'products/custom-grc.jpg',
+                'image' => 'products/complete-interior-design.jpg',
 
                 'price' => null,
 
@@ -184,8 +182,10 @@ class ProductSeeder extends Seeder
         ];
 
         foreach ($products as $product) {
-            Product::create($product);
+            Product::updateOrCreate(
+                ['slug' => $product['slug']],
+                $product
+            );
         }
     }
 }
-       

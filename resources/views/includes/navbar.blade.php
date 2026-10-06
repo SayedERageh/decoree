@@ -1,52 +1,53 @@
-
 @php
     /*
     |--------------------------------------------------------------------------
     | Check Active Products
     |--------------------------------------------------------------------------
-    | Show "Products" in navbar only when there is at least
-    | one active product in the database.
     */
-
     $hasActiveProducts = \App\Models\Product::where('is_active', true)->exists();
+
+    $isArabic = app()->getLocale() === 'ar';
 @endphp
 
+<header class="lux-header">
 
-<header class="site-header">
-
-    <nav class="main-navbar">
+    <nav class="lux-navbar">
 
         <div class="container">
 
-            <div class="navbar-inner">
+            <div class="lux-navbar-inner">
 
                 {{-- =====================================================
                     LOGO
                 ====================================================== --}}
-                <a href="{{ route('home') }}" class="navbar-brand">
+                <a href="{{ route('home') }}" class="lux-brand">
+
+                    <span class="lux-brand-glow"></span>
 
                     @if($company->logo)
 
-                        <img
-                            src="{{ asset('storage/' . $company->logo) }}"
-                            alt="{{ $company->company_name }}"
-                        >
+                        <span class="lux-logo-wrap">
+                            <img
+                                src="{{ asset('storage/' . $company->logo) }}"
+                                alt="{{ $company->company_name }}"
+                            >
+                        </span>
 
                     @else
 
-                        <div class="brand-text">
+                        <span class="lux-brand-text">
 
                             <strong>
                                 {{ $company->company_name }}
                             </strong>
 
-                            <span>
-                                {{ app()->getLocale() === 'ar'
-                                    ? 'الخدمات الصناعية'
-                                    : 'INDUSTRIAL SERVICES' }}
-                            </span>
+                            <small>
+                                {{ $isArabic
+                                    ? 'التصميم الداخلي الفاخر'
+                                    : 'PREMIUM INTERIOR DESIGN' }}
+                            </small>
 
-                        </div>
+                        </span>
 
                     @endif
 
@@ -56,72 +57,57 @@
                 {{-- =====================================================
                     DESKTOP NAVIGATION
                 ====================================================== --}}
-                <div class="navbar-menu">
+                <div class="lux-navbar-menu">
 
-                    {{-- Home --}}
                     <a
                         href="{{ route('home') }}"
-                        class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}"
+                        class="lux-nav-link {{ request()->routeIs('home') ? 'active' : '' }}"
                     >
-                        {{ app()->getLocale() === 'ar' ? 'الرئيسية' : 'HOME' }}
+                        <span>{{ $isArabic ? 'الرئيسية' : 'HOME' }}</span>
                     </a>
 
 
-                    {{-- About --}}
                     <a
                         href="{{ route('about') }}"
-                        class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}"
+                        class="lux-nav-link {{ request()->routeIs('about') ? 'active' : '' }}"
                     >
-                        {{ app()->getLocale() === 'ar' ? 'من نحن' : 'ABOUT US' }}
+                        <span>{{ $isArabic ? 'من نحن' : 'ABOUT' }}</span>
                     </a>
 
 
-                    {{-- Services --}}
                     <a
                         href="{{ route('services') }}"
-                        class="nav-link {{ request()->routeIs('services*') ? 'active' : '' }}"
+                        class="lux-nav-link {{ request()->routeIs('services*') ? 'active' : '' }}"
                     >
-                        {{ app()->getLocale() === 'ar' ? 'خدماتنا' : 'SERVICES' }}
+                        <span>{{ $isArabic ? 'خدماتنا' : 'SERVICES' }}</span>
                     </a>
 
 
-                    {{-- =================================================
-                        Products
-                        Show only if at least one active product exists
-                    ================================================== --}}
                     @if($hasActiveProducts)
 
                         <a
                             href="{{ route('products') }}"
-                            class="nav-link {{ request()->routeIs('products*') ? 'active' : '' }}"
+                            class="lux-nav-link {{ request()->routeIs('products*') ? 'active' : '' }}"
                         >
-                            {{ app()->getLocale() === 'ar'
-                                ? 'منتجاتنا'
-                                : 'PRODUCTS' }}
+                            <span>{{ $isArabic ? 'منتجاتنا' : 'PRODUCTS' }}</span>
                         </a>
 
                     @endif
 
 
-                    {{-- Projects --}}
                     <a
                         href="{{ route('projects') }}"
-                        class="nav-link {{ request()->routeIs('projects*') ? 'active' : '' }}"
+                        class="lux-nav-link {{ request()->routeIs('projects*') ? 'active' : '' }}"
                     >
-                        {{ app()->getLocale() === 'ar'
-                            ? 'مشاريعنا'
-                            : 'PROJECTS' }}
+                        <span>{{ $isArabic ? 'مشاريعنا' : 'PROJECTS' }}</span>
                     </a>
 
 
-                    {{-- Contact --}}
                     <a
                         href="{{ route('contact') }}"
-                        class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}"
+                        class="lux-nav-link {{ request()->routeIs('contact') ? 'active' : '' }}"
                     >
-                        {{ app()->getLocale() === 'ar'
-                            ? 'تواصل معنا'
-                            : 'CONTACT' }}
+                        <span>{{ $isArabic ? 'تواصل معنا' : 'CONTACT' }}</span>
                     </a>
 
                 </div>
@@ -130,27 +116,21 @@
                 {{-- =====================================================
                     DESKTOP ACTIONS
                 ====================================================== --}}
-                <div class="navbar-actions">
+                <div class="lux-navbar-actions">
 
                     {{-- Language --}}
                     <a
                         href="{{ route(
                             'language.switch',
                             [
-                                'locale' => app()->getLocale() === 'ar'
-                                    ? 'en'
-                                    : 'ar'
+                                'locale' => $isArabic ? 'en' : 'ar'
                             ]
                         ) }}"
-                        class="language-switcher"
+                        class="lux-language"
+                        aria-label="{{ $isArabic ? 'English' : 'العربية' }}"
                     >
-
                         <i class="bi bi-globe2"></i>
-
-                        <span>
-                            {{ app()->getLocale() === 'ar' ? 'EN' : 'AR' }}
-                        </span>
-
+                        <span>{{ $isArabic ? 'EN' : 'AR' }}</span>
                     </a>
 
 
@@ -159,18 +139,24 @@
 
                         <a
                             href="tel:{{ $company->phone }}"
-                            class="navbar-contact"
+                            class="lux-phone"
                         >
 
-                            <span>
-                                {{ app()->getLocale() === 'ar'
-                                    ? 'اتصل بنا'
-                                    : 'CALL US' }}
+                            <span class="lux-phone-icon">
+                                <i class="bi bi-telephone"></i>
                             </span>
 
-                            <strong>
-                                {{ $company->phone }}
-                            </strong>
+                            <span class="lux-phone-content">
+
+                                <small>
+                                    {{ $isArabic ? 'اتصل بنا' : 'CALL US' }}
+                                </small>
+
+                                <strong>
+                                    {{ $company->phone }}
+                                </strong>
+
+                            </span>
 
                         </a>
 
@@ -182,46 +168,33 @@
                 {{-- =====================================================
                     MOBILE ACTIONS
                 ====================================================== --}}
-                <div class="mobile-actions">
+                <div class="lux-mobile-actions">
 
-                    {{-- Mobile Language --}}
                     <a
                         href="{{ route(
                             'language.switch',
                             [
-                                'locale' => app()->getLocale() === 'ar'
-                                    ? 'en'
-                                    : 'ar'
+                                'locale' => $isArabic ? 'en' : 'ar'
                             ]
                         ) }}"
-                        class="mobile-language-top"
-                        aria-label="{{ app()->getLocale() === 'ar'
-                            ? 'English'
-                            : 'العربية' }}"
+                        class="lux-mobile-language"
+                        aria-label="{{ $isArabic ? 'English' : 'العربية' }}"
                     >
-
                         <i class="bi bi-globe2"></i>
-
-                        <span>
-                            {{ app()->getLocale() === 'ar' ? 'EN' : 'AR' }}
-                        </span>
-
+                        <span>{{ $isArabic ? 'EN' : 'AR' }}</span>
                     </a>
 
 
-                    {{-- Mobile Menu Toggle --}}
                     <button
                         type="button"
-                        class="mobile-menu-toggle"
+                        class="lux-menu-toggle"
                         id="mobileMenuToggle"
                         aria-label="Toggle navigation"
                         aria-expanded="false"
                     >
-
                         <span></span>
                         <span></span>
                         <span></span>
-
                     </button>
 
                 </div>
@@ -236,83 +209,83 @@
     {{-- ================================================================
         MOBILE MENU
     ================================================================= --}}
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="lux-mobile-menu" id="mobileMenu">
 
         <div class="container">
 
-            <div class="mobile-menu-inner">
+            <div class="lux-mobile-menu-inner">
+
+                {{-- Menu Glow --}}
+                <div class="lux-mobile-menu-glow"></div>
 
 
                 {{-- Home --}}
                 <a
                     href="{{ route('home') }}"
-                    class="{{ request()->routeIs('home') ? 'active' : '' }}"
+                    class="lux-mobile-link {{ request()->routeIs('home') ? 'active' : '' }}"
                 >
-
-                    <i class="bi bi-house"></i>
-
-                    <span>
-                        {{ app()->getLocale() === 'ar'
-                            ? 'الرئيسية'
-                            : 'HOME' }}
+                    <span class="lux-mobile-icon">
+                        <i class="bi bi-house"></i>
                     </span>
 
+                    <span>
+                        {{ $isArabic ? 'الرئيسية' : 'HOME' }}
+                    </span>
+
+                    <i class="bi bi-arrow-left lux-mobile-arrow"></i>
                 </a>
 
 
                 {{-- About --}}
                 <a
                     href="{{ route('about') }}"
-                    class="{{ request()->routeIs('about') ? 'active' : '' }}"
+                    class="lux-mobile-link {{ request()->routeIs('about') ? 'active' : '' }}"
                 >
-
-                    <i class="bi bi-building"></i>
-
-                    <span>
-                        {{ app()->getLocale() === 'ar'
-                            ? 'من نحن'
-                            : 'ABOUT US' }}
+                    <span class="lux-mobile-icon">
+                        <i class="bi bi-building"></i>
                     </span>
 
+                    <span>
+                        {{ $isArabic ? 'من نحن' : 'ABOUT US' }}
+                    </span>
+
+                    <i class="bi bi-arrow-left lux-mobile-arrow"></i>
                 </a>
 
 
                 {{-- Services --}}
                 <a
                     href="{{ route('services') }}"
-                    class="{{ request()->routeIs('services*') ? 'active' : '' }}"
+                    class="lux-mobile-link {{ request()->routeIs('services*') ? 'active' : '' }}"
                 >
-
-                    <i class="bi bi-tools"></i>
-
-                    <span>
-                        {{ app()->getLocale() === 'ar'
-                            ? 'خدماتنا'
-                            : 'SERVICES' }}
+                    <span class="lux-mobile-icon">
+                        <i class="bi bi-tools"></i>
                     </span>
 
+                    <span>
+                        {{ $isArabic ? 'خدماتنا' : 'SERVICES' }}
+                    </span>
+
+                    <i class="bi bi-arrow-left lux-mobile-arrow"></i>
                 </a>
 
 
-                {{-- =================================================
-                    Products
-                    Show only if at least one active product exists
-                ================================================== --}}
+                {{-- Products --}}
                 @if($hasActiveProducts)
 
                     <a
                         href="{{ route('products') }}"
-                        class="{{ request()->routeIs('products*') ? 'active' : '' }}"
+                        class="lux-mobile-link {{ request()->routeIs('products*') ? 'active' : '' }}"
                     >
-
-                        <i class="bi bi-box-seam"></i>
-
-                        <span>
-                            {{ app()->getLocale() === 'ar'
-                                ? 'منتجاتنا'
-                                : 'PRODUCTS' }}
+                        <span class="lux-mobile-icon">
+                            <i class="bi bi-box-seam"></i>
                         </span>
 
+                        <span>
+                            {{ $isArabic ? 'منتجاتنا' : 'PRODUCTS' }}
+                        </span>
+
+                        <i class="bi bi-arrow-left lux-mobile-arrow"></i>
                     </a>
 
                 @endif
@@ -321,77 +294,98 @@
                 {{-- Projects --}}
                 <a
                     href="{{ route('projects') }}"
-                    class="{{ request()->routeIs('projects*') ? 'active' : '' }}"
+                    class="lux-mobile-link {{ request()->routeIs('projects*') ? 'active' : '' }}"
                 >
-
-                    <i class="bi bi-buildings"></i>
-
-                    <span>
-                        {{ app()->getLocale() === 'ar'
-                            ? 'مشاريعنا'
-                            : 'PROJECTS' }}
+                    <span class="lux-mobile-icon">
+                        <i class="bi bi-buildings"></i>
                     </span>
 
+                    <span>
+                        {{ $isArabic ? 'مشاريعنا' : 'PROJECTS' }}
+                    </span>
+
+                    <i class="bi bi-arrow-left lux-mobile-arrow"></i>
                 </a>
 
 
                 {{-- Contact --}}
                 <a
                     href="{{ route('contact') }}"
-                    class="{{ request()->routeIs('contact') ? 'active' : '' }}"
+                    class="lux-mobile-link {{ request()->routeIs('contact') ? 'active' : '' }}"
                 >
-
-                    <i class="bi bi-envelope"></i>
-
-                    <span>
-                        {{ app()->getLocale() === 'ar'
-                            ? 'تواصل معنا'
-                            : 'CONTACT' }}
+                    <span class="lux-mobile-icon">
+                        <i class="bi bi-envelope"></i>
                     </span>
 
+                    <span>
+                        {{ $isArabic ? 'تواصل معنا' : 'CONTACT' }}
+                    </span>
+
+                    <i class="bi bi-arrow-left lux-mobile-arrow"></i>
                 </a>
 
 
                 {{-- =====================================================
                     MOBILE CONTACT
                 ====================================================== --}}
-                <div class="mobile-menu-contact">
+                <div class="lux-mobile-contact">
 
-                    {{-- Phone --}}
+                    <div class="lux-mobile-contact-title">
+                        <span></span>
+
+                        <small>
+                            {{ $isArabic ? 'تواصل معنا' : 'GET IN TOUCH' }}
+                        </small>
+
+                        <span></span>
+                    </div>
+
+
                     @if($company->phone)
 
-                        <a href="tel:{{ $company->phone }}">
-
-                            <i class="bi bi-telephone"></i>
+                        <a
+                            href="tel:{{ $company->phone }}"
+                            class="lux-mobile-contact-item"
+                        >
+                            <span class="lux-contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </span>
 
                             <span>
                                 {{ $company->phone }}
                             </span>
-
                         </a>
 
                     @endif
 
 
-                    {{-- WhatsApp --}}
                     @if($company->whatsapp)
 
                         <a
                             href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $company->whatsapp) }}"
                             target="_blank"
                             rel="noopener"
+                            class="lux-mobile-contact-item whatsapp"
                         >
-
-                            <i class="bi bi-whatsapp"></i>
+                            <span class="lux-contact-icon">
+                                <i class="bi bi-whatsapp"></i>
+                            </span>
 
                             <span>
                                 WhatsApp
                             </span>
-
                         </a>
 
                     @endif
 
+                </div>
+
+
+                {{-- Mobile Bottom Label --}}
+                <div class="lux-mobile-bottom-label">
+                    <span></span>
+                    <small>PREMIUM INTERIOR DESIGN</small>
+                    <span></span>
                 </div>
 
             </div>
@@ -406,89 +400,461 @@
 <style>
 
 /* =========================================================
-   MOBILE ACTIONS
+   LUXURY HEADER
 ========================================================= */
 
-.mobile-actions {
+.lux-header {
+    position: relative;
+    z-index: 9999;
+}
 
-    display: none;
 
-    align-items: center;
+/* =========================================================
+   NAVBAR
+========================================================= */
 
-    justify-content: center;
+.lux-navbar {
+    position: relative;
+    width: 100%;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 8, 12, .97) 0%,
+            rgba(7, 10, 14, .94) 100%
+        );
+    border-bottom: 1px solid rgba(212, 175, 55, .16);
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, .35),
+        inset 0 -1px 0 rgba(255,255,255,.025);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
 
-    gap: 8px;
 
-    flex-shrink: 0;
+.lux-navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.7),
+        rgba(212,175,55,.95),
+        rgba(255,255,255,.7),
+        transparent
+    );
+    opacity: .7;
+    animation: luxNavbarLine 4s ease-in-out infinite;
+}
+
+
+@keyframes luxNavbarLine {
+
+    0%,
+    100% {
+        opacity: .35;
+    }
+
+    50% {
+        opacity: 1;
+    }
 
 }
 
 
 /* =========================================================
-   MOBILE LANGUAGE
+   NAVBAR INNER
 ========================================================= */
 
-.mobile-language-top {
-
+.lux-navbar-inner {
+    min-height: 88px;
     display: flex;
-
     align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
 
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.lux-brand {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-width: 180px;
+    color: #fff !important;
+    text-decoration: none !important;
+    z-index: 2;
+}
+
+
+.lux-brand-glow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(212,175,55,.13);
+    filter: blur(30px);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+
+.lux-logo-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    max-width: 190px;
+}
 
-    gap: 5px;
 
-    min-width: 48px;
+.lux-logo-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border: 1px solid rgba(212,175,55,.25);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all .35s ease;
+}
 
-    height: 44px;
 
-    padding: 0 8px;
+.lux-brand:hover .lux-logo-wrap::before {
+    opacity: 1;
+    box-shadow: 0 0 25px rgba(212,175,55,.12);
+}
 
-    color: #ffffff !important;
 
-    text-decoration: none;
+.lux-logo-wrap img {
+    display: block;
+    max-width: 175px;
+    max-height: 58px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
 
-    font-size: 13px;
 
+.lux-brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.lux-brand-text strong {
+    position: relative;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -.4px;
+    line-height: 1.2;
+    background: linear-gradient(
+        90deg,
+        #fff 0%,
+        #f6e7a9 45%,
+        #d4af37 75%,
+        #fff 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: luxBrandShine 5s linear infinite;
+}
+
+
+@keyframes luxBrandShine {
+
+    to {
+        background-position: 200% center;
+    }
+
+}
+
+
+.lux-brand-text small {
+    color: rgba(255,255,255,.48);
+    font-size: 8px;
+    letter-spacing: 2.4px;
     font-weight: 700;
-
-    border: 1px solid rgba(255, 255, 255, .25);
-
-    border-radius: 5px;
-
-    background: rgba(255, 255, 255, .05);
-
-    transition: all .25s ease;
-
 }
 
 
-.mobile-language-top i {
+/* =========================================================
+   DESKTOP MENU
+========================================================= */
 
-    width: auto !important;
-
-    color: var(--tabarak-blue) !important;
-
-    font-size: 17px;
-
+.lux-navbar-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex: 1;
 }
 
 
-.mobile-language-top span {
-
-    color: #ffffff;
-
-    line-height: 1;
-
+.lux-nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 14px;
+    color: rgba(255,255,255,.67) !important;
+    text-decoration: none !important;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .35px;
+    white-space: nowrap;
+    transition: color .3s ease;
 }
 
 
-.mobile-language-top:hover {
+.lux-nav-link::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 5px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #d4af37,
+        transparent
+    );
+    transform: scaleX(0);
+    transition: transform .35s ease;
+    box-shadow: 0 0 10px rgba(212,175,55,.7);
+}
 
-    background: rgba(255, 255, 255, .12);
 
-    border-color: rgba(255, 255, 255, .45);
+.lux-nav-link::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    left: 50%;
+    bottom: 1px;
+    border-radius: 50%;
+    background: #d4af37;
+    box-shadow: 0 0 10px rgba(212,175,55,.8);
+    transform: translateX(-50%) scale(0);
+    transition: transform .3s ease;
+}
 
+
+.lux-nav-link:hover,
+.lux-nav-link.active {
+    color: #fff !important;
+}
+
+
+.lux-nav-link:hover::before,
+.lux-nav-link.active::before {
+    transform: scaleX(1);
+}
+
+
+.lux-nav-link:hover::after,
+.lux-nav-link.active::after {
+    transform: translateX(-50%) scale(1);
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.lux-navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LANGUAGE
+========================================================= */
+
+.lux-language {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-width: 58px;
+    height: 42px;
+    padding: 0 10px;
+    color: rgba(255,255,255,.85) !important;
+    text-decoration: none !important;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 8px;
+    background: rgba(255,255,255,.035);
+    transition: all .3s ease;
+    overflow: hidden;
+}
+
+
+.lux-language::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(212,175,55,.13),
+        transparent
+    );
+    transform: translateX(-100%);
+    transition: transform .5s ease;
+}
+
+
+.lux-language:hover {
+    color: #f5d77b !important;
+    border-color: rgba(212,175,55,.5);
+    box-shadow: 0 0 20px rgba(212,175,55,.1);
+}
+
+
+.lux-language:hover::before {
+    transform: translateX(100%);
+}
+
+
+.lux-language i {
+    color: #d4af37;
+    font-size: 15px;
+}
+
+
+.lux-language span {
+    position: relative;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+.lux-phone {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 50px;
+    padding: 5px 10px 5px 5px;
+    color: #fff !important;
+    text-decoration: none !important;
+    border: 1px solid rgba(212,175,55,.18);
+    border-radius: 10px;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,.055),
+        rgba(255,255,255,.018)
+    );
+    transition: all .35s ease;
+}
+
+
+.lux-phone:hover {
+    border-color: rgba(212,175,55,.55);
+    transform: translateY(-2px);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.3),
+        0 0 20px rgba(212,175,55,.08);
+}
+
+
+.lux-phone-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #d4af37;
+    background: rgba(212,175,55,.08);
+    border: 1px solid rgba(212,175,55,.2);
+}
+
+
+.lux-phone-icon i {
+    font-size: 14px;
+}
+
+
+.lux-phone-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    direction: ltr;
+    text-align: left;
+}
+
+
+.lux-phone-content small {
+    color: rgba(255,255,255,.42);
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+}
+
+
+.lux-phone-content strong {
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MOBILE ACTIONS
+========================================================= */
+
+.lux-mobile-actions {
+    display: none;
+    align-items: center;
+    gap: 7px;
+    flex-shrink: 0;
+}
+
+
+.lux-mobile-language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 46px;
+    height: 42px;
+    color: #fff !important;
+    text-decoration: none !important;
+    border: 1px solid rgba(212,175,55,.25);
+    border-radius: 8px;
+    background: rgba(255,255,255,.035);
+}
+
+
+.lux-mobile-language i {
+    color: #d4af37;
+    font-size: 15px;
+}
+
+
+.lux-mobile-language span {
+    font-size: 10px;
+    font-weight: 800;
 }
 
 
@@ -496,72 +862,58 @@
    MOBILE TOGGLE
 ========================================================= */
 
-.mobile-menu-toggle {
-
-    display: none;
-
-    align-items: center;
-
-    justify-content: center;
-
-    flex-direction: column;
-
-    gap: 5px;
-
-    width: 44px;
-
-    height: 44px;
-
+.lux-menu-toggle {
+    position: relative;
+    width: 42px;
+    height: 42px;
     padding: 0;
-
-    border: 1px solid rgba(255, 255, 255, .3);
-
-    border-radius: 5px;
-
-    background: rgba(255, 255, 255, .05);
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid rgba(212,175,55,.3);
+    border-radius: 8px;
+    background: rgba(255,255,255,.035);
     cursor: pointer;
-
-    flex-shrink: 0;
-
 }
 
 
-.mobile-menu-toggle span {
-
+.lux-menu-toggle span {
     display: block;
-
-    width: 20px;
-
-    height: 2px;
-
-    background: #ffffff;
-
+    width: 19px;
+    height: 1.5px;
     border-radius: 2px;
-
-    transition: all .25s ease;
-
+    background: #fff;
+    box-shadow: 0 0 7px rgba(255,255,255,.25);
+    transition: all .35s ease;
 }
 
 
-.mobile-menu-toggle.active span:nth-child(1) {
-
-    transform: translateY(7px) rotate(45deg);
-
+.lux-menu-toggle.active {
+    border-color: rgba(212,175,55,.6);
 }
 
 
-.mobile-menu-toggle.active span:nth-child(2) {
+.lux-menu-toggle.active span {
+    background: #d4af37;
+    box-shadow: 0 0 10px rgba(212,175,55,.6);
+}
 
+
+.lux-menu-toggle.active span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+}
+
+
+.lux-menu-toggle.active span:nth-child(2) {
     opacity: 0;
-
+    transform: scaleX(0);
 }
 
 
-.mobile-menu-toggle.active span:nth-child(3) {
-
-    transform: translateY(-7px) rotate(-45deg);
-
+.lux-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
 }
 
 
@@ -569,47 +921,87 @@
    MOBILE MENU
 ========================================================= */
 
-.mobile-menu {
-
+.lux-mobile-menu {
     position: absolute;
-
     top: 100%;
-
-    right: 0;
-
     left: 0;
-
+    right: 0;
     width: 100%;
-
     display: none;
-
-    z-index: 9999;
-
-    background: rgba(6, 26, 43, .98);
-
-    border-top: 1px solid rgba(255, 255, 255, .08);
-
-    box-shadow: 0 25px 50px rgba(0, 0, 0, .25);
-
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 85% 0%,
+            rgba(212,175,55,.10),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(7,10,14,.99),
+            rgba(3,5,8,.99)
+        );
+    border-top: 1px solid rgba(212,175,55,.2);
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.55),
+        inset 0 1px 0 rgba(255,255,255,.025);
 }
 
 
-.mobile-menu.open,
-.mobile-menu.active {
-
+.lux-mobile-menu.open,
+.lux-mobile-menu.active {
     display: block !important;
+    animation: luxMenuReveal .35s ease both;
+}
+
+
+@keyframes luxMenuReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
 }
 
 
-.mobile-menu-inner {
+.lux-mobile-menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 12%;
+    right: 12%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #d4af37,
+        transparent
+    );
+    box-shadow: 0 0 12px rgba(212,175,55,.6);
+}
 
-    display: flex;
 
-    flex-direction: column;
+.lux-mobile-menu-inner {
+    position: relative;
+    padding: 18px 0 25px;
+}
 
-    padding: 14px 0 24px;
 
+.lux-mobile-menu-glow {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    top: 0;
+    right: 0;
+    background: rgba(212,175,55,.06);
+    filter: blur(45px);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 
@@ -617,62 +1009,100 @@
    MOBILE LINKS
 ========================================================= */
 
-.mobile-menu-inner > a {
-
+.lux-mobile-link {
+    position: relative;
     display: flex !important;
-
     align-items: center;
-
     gap: 12px;
-
     width: 100%;
-
-    min-height: 52px;
-
-    padding: 0 16px;
-
-    border-bottom: 1px solid rgba(255, 255, 255, .07);
-
-    color: rgba(255, 255, 255, .9) !important;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    transition: all .2s ease;
-
+    min-height: 58px;
+    padding: 0 5px;
+    color: rgba(255,255,255,.78) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(255,255,255,.055);
+    transition: all .3s ease;
 }
 
 
-.mobile-menu-inner > a:hover,
-.mobile-menu-inner > a.active {
-
-    color: var(--tabarak-blue) !important;
-
-    background: rgba(255, 255, 255, .04);
-
+.lux-mobile-link::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 12px;
+    bottom: 12px;
+    width: 2px;
+    background: #d4af37;
+    box-shadow: 0 0 12px rgba(212,175,55,.7);
+    transform: scaleY(0);
+    transition: transform .3s ease;
 }
 
 
-.mobile-menu-inner > a i {
+.lux-mobile-link:hover,
+.lux-mobile-link.active {
+    color: #fff !important;
+    padding-right: 12px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(212,175,55,.055)
+    );
+}
 
-    width: 22px;
 
+.lux-mobile-link:hover::before,
+.lux-mobile-link.active::before {
+    transform: scaleY(1);
+}
+
+
+.lux-mobile-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
-
-    color: var(--tabarak-blue);
-
-    font-size: 17px;
-
+    color: #d4af37;
+    border: 1px solid rgba(212,175,55,.18);
+    border-radius: 8px;
+    background: rgba(212,175,55,.05);
+    transition: all .3s ease;
 }
 
 
-.mobile-menu-inner > a span {
+.lux-mobile-link:hover .lux-mobile-icon,
+.lux-mobile-link.active .lux-mobile-icon {
+    color: #fff;
+    border-color: rgba(212,175,55,.5);
+    background: rgba(212,175,55,.12);
+    box-shadow: 0 0 18px rgba(212,175,55,.1);
+}
 
-    display: block;
 
+.lux-mobile-icon i {
+    font-size: 15px;
+}
+
+
+.lux-mobile-link > span:nth-child(2) {
+    flex: 1;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.lux-mobile-arrow {
+    color: rgba(212,175,55,.55);
+    font-size: 12px;
+    transition: transform .3s ease;
+}
+
+
+.lux-mobile-link:hover .lux-mobile-arrow,
+.lux-mobile-link.active .lux-mobile-arrow {
+    color: #d4af37;
+    transform: translateX(-4px);
 }
 
 
@@ -680,57 +1110,126 @@
    MOBILE CONTACT
 ========================================================= */
 
-.mobile-menu-contact {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 8px;
-
-    margin-top: 16px;
-
-    padding: 14px 0 0;
-
-    border-top: 1px solid rgba(255, 255, 255, .08);
-
+.lux-mobile-contact {
+    margin-top: 20px;
+    padding: 18px 0 0;
+    border-top: 1px solid rgba(255,255,255,.07);
 }
 
 
-.mobile-menu-contact a {
-
+.lux-mobile-contact-title {
     display: flex;
-
     align-items: center;
+    gap: 9px;
+    margin-bottom: 13px;
+}
 
+
+.lux-mobile-contact-title span {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(212,175,55,.3)
+    );
+}
+
+
+.lux-mobile-contact-title span:last-child {
+    background: linear-gradient(
+        90deg,
+        rgba(212,175,55,.3),
+        transparent
+    );
+}
+
+
+.lux-mobile-contact-title small {
+    color: rgba(255,255,255,.42);
+    font-size: 8px;
+    letter-spacing: 1.8px;
+    font-weight: 800;
+}
+
+
+.lux-mobile-contact-item {
+    display: flex;
+    align-items: center;
     gap: 10px;
-
-    min-height: 44px;
-
-    padding: 0 16px;
-
-    color: rgba(255, 255, 255, .8);
-
-    text-decoration: none;
-
-    font-size: 13px;
-
+    min-height: 46px;
+    padding: 0 3px;
+    color: rgba(255,255,255,.72) !important;
+    text-decoration: none !important;
+    font-size: 12px;
+    font-weight: 600;
+    transition: color .25s ease;
 }
 
 
-.mobile-menu-contact a:hover {
-
-    color: #ffffff;
-
+.lux-mobile-contact-item:hover {
+    color: #fff !important;
 }
 
 
-.mobile-menu-contact i {
+.lux-contact-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #d4af37;
+    background: rgba(212,175,55,.06);
+    border: 1px solid rgba(212,175,55,.15);
+}
 
-    color: var(--tabarak-blue);
 
-    font-size: 17px;
+.lux-mobile-contact-item.whatsapp .lux-contact-icon {
+    color: #25d366;
+    border-color: rgba(37,211,102,.2);
+    background: rgba(37,211,102,.05);
+}
 
+
+/* =========================================================
+   MOBILE BOTTOM
+========================================================= */
+
+.lux-mobile-bottom-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 17px;
+}
+
+
+.lux-mobile-bottom-label span {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(212,175,55,.25)
+    );
+}
+
+
+.lux-mobile-bottom-label span:last-child {
+    background: linear-gradient(
+        90deg,
+        rgba(212,175,55,.25),
+        transparent
+    );
+}
+
+
+.lux-mobile-bottom-label small {
+    color: rgba(255,255,255,.25);
+    font-size: 7px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    white-space: nowrap;
 }
 
 
@@ -738,63 +1237,45 @@
    TABLET + MOBILE
 ========================================================= */
 
+@media (max-width: 1199px) {
+
+    .lux-navbar-menu {
+        gap: 0;
+    }
+
+    .lux-nav-link {
+        padding: 0 10px;
+        font-size: 11px;
+    }
+
+    .lux-phone-content {
+        display: none;
+    }
+
+    .lux-phone {
+        padding: 5px;
+    }
+
+}
+
+
 @media (max-width: 991px) {
 
-    .navbar-inner {
-
+    .lux-navbar-inner {
         min-height: 78px;
-
     }
 
-
-    /* Hide desktop navigation */
-
-    .navbar-menu {
-
+    .lux-navbar-menu,
+    .lux-navbar-actions {
         display: none !important;
-
     }
 
-
-    /* Hide desktop actions */
-
-    .navbar-actions {
-
-        display: none !important;
-
-    }
-
-
-    /* Show mobile actions */
-
-    .mobile-actions {
-
+    .lux-mobile-actions {
         display: flex !important;
-
     }
 
-
-    /* Show hamburger */
-
-    .mobile-menu-toggle {
-
-        display: flex !important;
-
-    }
-
-
-    /* Mobile menu */
-
-    .mobile-menu {
-
+    .lux-mobile-menu {
         position: absolute;
-
-        top: 100%;
-
-        right: 0;
-
-        left: 0;
-
     }
 
 }
@@ -806,103 +1287,49 @@
 
 @media (max-width: 575px) {
 
-    .navbar-inner {
-
+    .lux-navbar-inner {
         min-height: 70px;
-
     }
 
-
-    .navbar-brand {
-
+    .lux-brand {
         min-width: 0;
-
-        max-width: calc(100% - 110px);
-
+        max-width: calc(100% - 100px);
     }
 
-
-    .navbar-brand img {
-
+    .lux-logo-wrap img {
         max-width: 145px;
-
-        max-height: 46px;
-
-        object-fit: contain;
-
+        max-height: 47px;
     }
 
-
-    .brand-text {
-
-        min-width: 0;
-
-    }
-
-
-    .brand-text strong {
-
+    .lux-brand-text strong {
         font-size: 16px;
-
     }
 
-
-    .brand-text span {
-
-        font-size: 9px;
-
+    .lux-brand-text small {
+        font-size: 6px;
+        letter-spacing: 1.6px;
     }
 
-
-    .mobile-actions {
-
-        gap: 6px;
-
+    .lux-mobile-actions {
+        gap: 5px;
     }
 
-
-    .mobile-language-top {
-
-        min-width: 44px;
-
-        height: 42px;
-
-        padding: 0 6px;
-
-        font-size: 12px;
-
-    }
-
-
-    .mobile-language-top i {
-
-        font-size: 16px;
-
-    }
-
-
-    .mobile-menu-toggle {
-
+    .lux-mobile-language {
         width: 42px;
-
-        height: 42px;
-
+        height: 40px;
     }
 
-
-    .mobile-menu-inner {
-
-        padding: 12px 0 22px;
-
+    .lux-menu-toggle {
+        width: 40px;
+        height: 40px;
     }
 
+    .lux-mobile-menu-inner {
+        padding: 13px 0 21px;
+    }
 
-    .mobile-menu-inner > a {
-
-        min-height: 50px;
-
-        font-size: 14px;
-
+    .lux-mobile-link {
+        min-height: 55px;
     }
 
 }
@@ -914,46 +1341,55 @@
 
 @media (max-width: 380px) {
 
-    .navbar-brand {
-
-        max-width: calc(100% - 100px);
-
+    .lux-brand {
+        max-width: calc(100% - 92px);
     }
 
-
-    .navbar-brand img {
-
+    .lux-logo-wrap img {
         max-width: 125px;
-
     }
 
-
-    .mobile-language-top {
-
-        min-width: 40px;
-
-        padding: 0 5px;
-
+    .lux-mobile-language {
+        width: 38px;
     }
 
-
-    .mobile-language-top i {
-
-        font-size: 15px;
-
+    .lux-mobile-language span {
+        font-size: 9px;
     }
 
+    .lux-menu-toggle {
+        width: 38px;
+    }
 
-    .mobile-menu-toggle {
+    .lux-mobile-link > span:nth-child(2) {
+        font-size: 12px;
+    }
 
-        width: 40px;
+}
 
-        height: 40px;
 
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .lux-navbar::before,
+    .lux-brand-text strong {
+        animation: none !important;
+    }
+
+    .lux-mobile-menu.open,
+    .lux-mobile-menu.active {
+        animation: none !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
     }
 
 }
 
 </style>
-  
-

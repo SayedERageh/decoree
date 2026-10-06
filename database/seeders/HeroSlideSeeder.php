@@ -9,7 +9,12 @@ class HeroSlideSeeder extends Seeder
 {
     public function run(): void
     {
-        HeroSlide::query()->delete();
+        /*
+        |--------------------------------------------------------------------------
+        | حماية التحديثات الحالية
+        |--------------------------------------------------------------------------
+        | يتم تحديث الشرائح الحالية أو إنشاؤها إذا لم تكن موجودة.
+        */
 
         /*
         |--------------------------------------------------------------------------
@@ -17,30 +22,33 @@ class HeroSlideSeeder extends Seeder
         |--------------------------------------------------------------------------
         */
 
-        HeroSlide::create([
-            'title_ar' => 'جي آر سي مكة | واجهات GRC وديكورات خارجية',
-            'title_en' => 'GRC Makkah | GRC Facades & Exterior Decorations',
+        HeroSlide::updateOrCreate(
+            ['sort_order' => 1],
+            [
+                'title_ar' => 'دمام ديكور | تنفيذ وتجديد المنازل والديكورات الداخلية',
+                'title_en' => 'Dammam Decor | Interior Design & Home Renovation',
 
-            'subtitle_ar' => 'جي آر سي مكة لأعمال الواجهات والديكورات المعمارية',
-            'subtitle_en' => 'GRC Makkah for Architectural Facades & Exterior Decorations',
+                'subtitle_ar' => 'تصاميم عصرية وتنفيذ يليق بمنزلك',
+                'subtitle_en' => 'Modern Designs & Quality Execution',
 
-            'description_ar' => 'تقدم جي آر سي مكة حلول GRC متكاملة تشمل تصميم وتصنيع وتركيب واجهات GRC والواجهات المعمارية والديكورات الخارجية للفلل والقصور والمباني السكنية والتجارية والإدارية في مكة المكرمة.',
+                'description_ar' => 'نقدم خدمات تنفيذ وتجديد المنازل والديكورات الداخلية في الدمام والخبر والقطيف، من ديكورات التلفزيون والخزائن وغرف النوم إلى المرايات وتكسيات الجدران وجميع أعمال الديكور الداخلي.',
 
-            'description_en' => 'GRC Makkah provides complete GRC solutions including the design, manufacturing, and installation of GRC facades, architectural facades, and exterior decorations for villas, palaces, residential, commercial, and administrative buildings in Makkah.',
+                'description_en' => 'We provide modern interior design, home renovation, and execution services in Dammam, Khobar, and Qatif, including TV walls, wardrobes, bedrooms, mirrors, wall finishes, and complete interior decoration solutions.',
 
-            'image' => 'hero-slides/slide-1.jpg',
+                'image' => 'hero-slides/slide-1.jpg',
 
-            'button_text_ar' => 'خدمات جي آر سي مكة',
-            'button_text_en' => 'GRC Makkah Services',
-            'button_url' => '/services',
+                'button_text_ar' => 'اكتشف خدماتنا',
+                'button_text_en' => 'Explore Our Services',
+                'button_url' => '/services',
 
-            'secondary_button_text_ar' => 'تواصل مع جي آر سي مكة',
-            'secondary_button_text_en' => 'Contact GRC Makkah',
-            'secondary_button_url' => '/contact',
+                'secondary_button_text_ar' => 'تواصل معنا',
+                'secondary_button_text_en' => 'Contact Us',
+                'secondary_button_url' => '/contact',
 
-            'sort_order' => 1,
-            'is_active' => true,
-        ]);
+                'sort_order' => 1,
+                'is_active' => true,
+            ]
+        );
 
         /*
         |--------------------------------------------------------------------------
@@ -48,30 +56,33 @@ class HeroSlideSeeder extends Seeder
         |--------------------------------------------------------------------------
         */
 
-        HeroSlide::create([
-            'title_ar' => 'واجهات GRC مكة بتصميم يناسب مشروعك',
-            'title_en' => 'GRC Makkah Facades Designed for Your Project',
+        HeroSlide::updateOrCreate(
+            ['sort_order' => 2],
+            [
+                'title_ar' => 'تصميم عصري يليق بمنزلك',
+                'title_en' => 'Modern Design for Your Home',
 
-            'subtitle_ar' => 'حلول GRC مخصصة من جي آر سي مكة',
-            'subtitle_en' => 'Customized GRC Solutions by GRC Makkah',
+                'subtitle_ar' => 'ديكورات داخلية بتفاصيل أنيقة وحلول مخصصة',
+                'subtitle_en' => 'Elegant Interiors with Customized Solutions',
 
-            'description_ar' => 'تنفذ جي آر سي مكة أعمال GRC والواجهات المعمارية والكرانيش والأعمدة والقباب والأقواس والزخارف والبانوهات ومداخل المباني، مع الاهتمام بدقة القياسات والتصنيع والتركيب والتشطيب.',
+                'description_ar' => 'ننفذ غرف النوم والخزائن وديكورات التلفزيون والمرايات والمداخل وتكسيات الجدران بتصاميم مودرن وحلول مخصصة تناسب مساحة منزلك وذوقك.',
 
-            'description_en' => 'GRC Makkah provides GRC facades, architectural facades, cornices, columns, domes, arches, decorative elements, panels, and building entrances with accurate measurements, professional manufacturing, installation, and finishing.',
+                'description_en' => 'We create bedrooms, wardrobes, TV walls, mirrors, entrances, and wall finishes with modern designs and customized solutions tailored to your space and personal style.',
 
-            'image' => 'hero-slides/slide-2.jpg',
+                'image' => 'hero-slides/slide-2.jpg',
 
-            'button_text_ar' => 'أعمال GRC مكة',
-            'button_text_en' => 'GRC Makkah Works',
-            'button_url' => '/services',
+                'button_text_ar' => 'شاهد أعمالنا',
+                'button_text_en' => 'View Our Work',
+                'button_url' => '/portfolio',
 
-            'secondary_button_text_ar' => 'اطلب عرض سعر',
-            'secondary_button_text_en' => 'Request a Quote',
-            'secondary_button_url' => '/contact',
+                'secondary_button_text_ar' => 'اطلب عرض سعر',
+                'secondary_button_text_en' => 'Request a Quote',
+                'secondary_button_url' => '/contact',
 
-            'sort_order' => 2,
-            'is_active' => true,
-        ]);
+                'sort_order' => 2,
+                'is_active' => true,
+            ]
+        );
 
         /*
         |--------------------------------------------------------------------------
@@ -79,30 +90,33 @@ class HeroSlideSeeder extends Seeder
         |--------------------------------------------------------------------------
         */
 
-        HeroSlide::create([
-            'title_ar' => 'شركة جي آر سي مكة من التصميم إلى التشطيب',
-            'title_en' => 'GRC Makkah From Design to Final Finishing',
+        HeroSlide::updateOrCreate(
+            ['sort_order' => 3],
+            [
+                'title_ar' => 'من الفكرة إلى آخر تفصيلة',
+                'title_en' => 'From Concept to Every Detail',
 
-            'subtitle_ar' => 'حلول متكاملة لأعمال GRC والواجهات في مكة',
-            'subtitle_en' => 'Complete GRC & Facade Solutions in Makkah',
+                'subtitle_ar' => 'حلول متكاملة للديكور الداخلي وتجديد المنازل',
+                'subtitle_en' => 'Complete Interior Design & Home Renovation Solutions',
 
-            'description_ar' => 'تعمل جي آر سي مكة مع أصحاب المشروعات والمهندسين والاستشاريين والمقاولين والمطورين لتنفيذ واجهات GRC وديكورات خارجية تجمع بين جمال التصميم والمتانة ودقة التنفيذ وجودة التشطيب.',
+                'description_ar' => 'نحول أفكارك إلى مساحات أنيقة وعملية من خلال التصميم والتنفيذ والتجديد، مع الاهتمام بجودة الخامات ودقة التشطيب وأدق التفاصيل في كل مشروع.',
 
-            'description_en' => 'GRC Makkah works with property owners, architects, consultants, contractors, and developers to deliver GRC facades and exterior decorations that combine architectural beauty, durability, precise execution, and quality finishing.',
+                'description_en' => 'We turn your ideas into elegant and functional spaces through design, execution, and renovation, with a focus on quality materials, precise finishing, and attention to every detail.',
 
-            'image' => 'hero-slides/slide-3.jpg',
+                'image' => 'hero-slides/slide-3.jpg',
 
-            'button_text_ar' => 'شاهد خدمات جي آر سي مكة',
-            'button_text_en' => 'View GRC Makkah Services',
-            'button_url' => '/services',
+                'button_text_ar' => 'اطلب تصميمك الآن',
+                'button_text_en' => 'Request Your Design',
+                'button_url' => '/contact',
 
-            'secondary_button_text_ar' => 'اطلب استشارة',
-            'secondary_button_text_en' => 'Request Consultation',
-            'secondary_button_url' => '/contact',
+                'secondary_button_text_ar' => 'تعرّف علينا',
+                'secondary_button_text_en' => 'About Us',
+                'secondary_button_url' => '/about',
 
-            'sort_order' => 3,
-            'is_active' => true,
-        ]);
+                'sort_order' => 3,
+                'is_active' => true,
+            ]
+        );
     }
 }
-    
+

@@ -4,126 +4,34 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    /*
-    |--------------------------------------------------------------------------
-    | AOS
-    |--------------------------------------------------------------------------
-    */
+    /* =====================================================
+       AOS
+       ===================================================== */
 
     if (typeof AOS !== 'undefined') {
+
         AOS.init({
             duration: 800,
             easing: 'ease-out-cubic',
             once: true,
             offset: 80,
         });
-    }
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | HERO SWIPER
-    |--------------------------------------------------------------------------
-    */
-
-    const heroSwiper = document.querySelector('.hero-swiper');
-
-    if (heroSwiper && typeof Swiper !== 'undefined') {
-
-        new Swiper('.hero-swiper', {
-
-            loop: true,
-
-            speed: 1000,
-
-            effect: 'fade',
-
-            fadeEffect: {
-                crossFade: true,
-            },
-
-            autoplay: {
-                delay: 6000,
-                disableOnInteraction: false,
-            },
-
-            pagination: {
-                el: '.hero-pagination',
-                clickable: true,
-            },
-
-            navigation: {
-                nextEl: '.hero-next',
-                prevEl: '.hero-prev',
-            },
-
-        });
 
     }
 
 
-    /*
-    |--------------------------------------------------------------------------
-    | SIMPLE IMAGE REVEAL
-    |--------------------------------------------------------------------------
-    */
-
-    const imageCards = document.querySelectorAll(
-        '.service-card, .project-card, .about-visual'
-    );
-
-    if (imageCards.length) {
-
-        imageCards.forEach(function (card) {
-
-            card.addEventListener('mouseenter', function () {
-                card.classList.add('is-hovered');
-            });
-
-            card.addEventListener('mouseleave', function () {
-                card.classList.remove('is-hovered');
-            });
-
-        });
-
-    }
-
-});
-
-/* =========================================================
-   TABARAK - GLOBAL INITIALIZATION
-   ========================================================= */
-
-document.addEventListener('DOMContentLoaded', function () {
-
-    /*
-    |--------------------------------------------------------------------------
-    | AOS
-    |--------------------------------------------------------------------------
-    */
-
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-out-cubic',
-            once: true,
-            offset: 80,
-        });
-    }
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | MOBILE MENU
-    |--------------------------------------------------------------------------
-    */
+    /* =====================================================
+       MOBILE MENU
+       ===================================================== */
 
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
 
     if (mobileMenuToggle && mobileMenu) {
 
-        mobileMenuToggle.addEventListener('click', function () {
+        mobileMenuToggle.addEventListener('click', function (event) {
+
+            event.stopPropagation();
 
             mobileMenuToggle.classList.toggle('active');
             mobileMenu.classList.toggle('open');
@@ -138,9 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
 
-        /*
-        | Close menu after clicking a link
-        */
+        /* Close menu after clicking a link */
 
         mobileMenu.querySelectorAll('a').forEach(function (link) {
 
@@ -159,9 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
 
-        /*
-        | Close menu when clicking outside
-        */
+        /* Close menu when clicking outside */
 
         document.addEventListener('click', function (event) {
 
@@ -183,23 +87,37 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
     }
+/* =====================================================
+   LUXURY HERO SWIPER
+   ===================================================== */
 
+const luxHeroSwiper = document.querySelector('.lux-hero-swiper');
 
-    /*
-    |--------------------------------------------------------------------------
-    | HERO SWIPER
-    |--------------------------------------------------------------------------
-    */
+if (luxHeroSwiper) {
 
-    const heroSwiper = document.querySelector('.hero-swiper');
+    if (typeof Swiper === 'undefined') {
 
-    if (heroSwiper && typeof Swiper !== 'undefined') {
+        console.error('Swiper JS is not loaded.');
 
-        new Swiper('.hero-swiper', {
+    } else {
+
+        const pagination = luxHeroSwiper.querySelector(
+            '.lux-hero-pagination'
+        );
+
+        const nextButton = luxHeroSwiper.querySelector(
+            '.lux-hero-next'
+        );
+
+        const prevButton = luxHeroSwiper.querySelector(
+            '.lux-hero-prev'
+        );
+
+        new Swiper(luxHeroSwiper, {
 
             loop: true,
 
-            speed: 1000,
+            speed: 1200,
 
             effect: 'fade',
 
@@ -210,28 +128,33 @@ document.addEventListener('DOMContentLoaded', function () {
             autoplay: {
                 delay: 6000,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: false,
             },
 
-            pagination: {
-                el: '.hero-pagination',
+            allowTouchMove: true,
+
+            watchSlidesProgress: true,
+
+            pagination: pagination ? {
+                el: pagination,
                 clickable: true,
-            },
+            } : false,
 
-            navigation: {
-                nextEl: '.hero-next',
-                prevEl: '.hero-prev',
-            },
+            navigation: (nextButton && prevButton) ? {
+                nextEl: nextButton,
+                prevEl: prevButton,
+            } : false,
 
         });
 
+        console.log('Luxury Hero Swiper initialized successfully.');
+
     }
 
-
-    /*
-    |--------------------------------------------------------------------------
-    | SIMPLE IMAGE REVEAL
-    |--------------------------------------------------------------------------
-    */
+}
+    /* =====================================================
+       IMAGE HOVER
+       ===================================================== */
 
     const imageCards = document.querySelectorAll(
         '.service-card, .project-card, .about-visual'
@@ -242,11 +165,15 @@ document.addEventListener('DOMContentLoaded', function () {
         imageCards.forEach(function (card) {
 
             card.addEventListener('mouseenter', function () {
+
                 card.classList.add('is-hovered');
+
             });
 
             card.addEventListener('mouseleave', function () {
+
                 card.classList.remove('is-hovered');
+
             });
 
         });
@@ -254,4 +181,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
-         

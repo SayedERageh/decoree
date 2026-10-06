@@ -12,146 +12,194 @@ class ProjectSeeder extends Seeder
         $projects = [
 
             [
-                'title_ar' => 'تنفيذ واجهة GRC مكة لفيلا سكنية',
-                'title_en' => 'GRC Makkah Facade for Residential Villa',
+                'title_ar' => 'تنفيذ ديكور تلفزيون مودرن',
+                'title_en' => 'Modern TV Wall Design',
 
-                'slug' => 'grc-makkah-facade-residential-villa',
+                'slug' => 'modern-tv-wall-design',
 
-                'category_ar' => 'واجهات GRC مكة',
-                'category_en' => 'GRC Makkah Facades',
+                'category_ar' => 'ديكورات تلفزيون',
+                'category_en' => 'TV Wall Designs',
 
                 'description_ar' =>
-                    'تنفيذ واجهة GRC في مكة المكرمة لفيلا سكنية بتصميم معماري متكامل، تشمل الكرانيش والإطارات والزخارف والعناصر الخارجية، مع الاهتمام بدقة التنفيذ وجودة التشطيب. ويقدم جي آر سي مكة حلول واجهات GRC مناسبة للفلل والمباني السكنية في مكة.',
+                    'تصميم وتنفيذ ديكور تلفزيون مودرن يجمع بين الخامات الحديثة والإضاءة المخفية والتفاصيل الأنيقة، مع استغلال المساحة بطريقة عملية ومتناسقة مع تصميم المنزل.',
 
                 'description_en' =>
-                    'GRC Makkah facade execution for a residential villa in Makkah, including cornices, frames, decorative elements, and exterior architectural details with precise execution and professional finishing.',
+                    'A modern TV wall design combining contemporary materials, concealed lighting, and elegant details, with a practical layout that complements the overall interior.',
 
-                'location_ar' => 'مكة المكرمة، المملكة العربية السعودية',
-                'location_en' => 'Makkah, Saudi Arabia',
+                'location_ar' => 'الدمام، المملكة العربية السعودية',
+                'location_en' => 'Dammam, Saudi Arabia',
 
-                'image' => 'projects/grc-villa-facade.jpg',
+                'image' => 'projects/modern-tv-wall.jpg',
 
                 'sort_order' => 1,
                 'is_active' => true,
             ],
 
             [
-                'title_ar' => 'ديكورات GRC مكة الخارجية لقصر',
-                'title_en' => 'GRC Makkah Exterior Decorations for Palace',
+                'title_ar' => 'تصميم وتنفيذ غرفة نوم مودرن',
+                'title_en' => 'Modern Bedroom Design',
 
-                'slug' => 'grc-makkah-exterior-decorations-palace',
+                'slug' => 'modern-bedroom-design',
 
-                'category_ar' => 'ديكورات GRC مكة',
-                'category_en' => 'GRC Makkah Exterior Decorations',
+                'category_ar' => 'غرف نوم',
+                'category_en' => 'Bedroom Designs',
 
                 'description_ar' =>
-                    'تنفيذ ديكورات GRC مكة والزخارف المعمارية الخارجية لقصر بتصميم مميز، باستخدام عناصر GRC مصممة لتتناسب مع الطابع المعماري للمبنى. تشمل الأعمال الزخارف والكرانيش والعناصر الخارجية لإظهار الواجهة بصورة فاخرة ومتناسقة.',
+                    'تنفيذ غرفة نوم بتصميم عصري ومريح يجمع بين الأناقة والعملية، مع تنسيق الألوان والخامات والإضاءة للحصول على مساحة هادئة ومتناسقة.',
 
                 'description_en' =>
-                    'GRC Makkah exterior decorations and architectural elements for a palace, designed to match the building style and create an elegant and distinctive facade using custom GRC solutions.',
+                    'A modern and comfortable bedroom combining style and functionality, with carefully coordinated colors, materials, and lighting for a calm and cohesive interior.',
 
-                'location_ar' => 'مكة المكرمة، المملكة العربية السعودية',
-                'location_en' => 'Makkah, Saudi Arabia',
+                'location_ar' => 'الخبر، المملكة العربية السعودية',
+                'location_en' => 'Khobar, Saudi Arabia',
 
-                'image' => 'projects/palace-exterior-decoration.jpg',
+                'image' => 'projects/modern-bedroom.jpg',
 
                 'sort_order' => 2,
                 'is_active' => true,
             ],
 
             [
-                'title_ar' => 'واجهة GRC مكة لمبنى تجاري',
-                'title_en' => 'GRC Makkah Facade for Commercial Building',
+                'title_ar' => 'خزائن مودرن بتصميم مخصص',
+                'title_en' => 'Custom Modern Wardrobes',
 
-                'slug' => 'grc-makkah-facade-commercial-building',
+                'slug' => 'custom-modern-wardrobes',
 
-                'category_ar' => 'واجهات GRC مكة للمباني التجارية',
-                'category_en' => 'GRC Makkah Commercial Facades',
+                'category_ar' => 'خزائن',
+                'category_en' => 'Modern Wardrobes',
 
                 'description_ar' =>
-                    'تنفيذ واجهة GRC مكة لمبنى تجاري بتصميم معماري حديث، مع تصنيع وتركيب عناصر الواجهة الخارجية وفق التصميم الهندسي ومتطلبات المشروع. تجمع أعمال جي آر سي مكة بين الشكل المعماري المميز ودقة التنفيذ وجودة التشطيب.',
+                    'تصميم وتنفيذ خزائن مودرن بتقسيمات داخلية عملية وتشطيبات أنيقة، مع استغلال المساحات بشكل ذكي بما يتناسب مع احتياجات المنزل والتصميم الداخلي.',
 
                 'description_en' =>
-                    'Modern GRC Makkah facade for a commercial building, including manufacturing and installation of exterior GRC elements according to the architectural design and project requirements.',
+                    'Custom modern wardrobes with practical internal layouts and elegant finishes, designed to maximize space and complement the interior design of the home.',
 
-                'location_ar' => 'مكة المكرمة، المملكة العربية السعودية',
-                'location_en' => 'Makkah, Saudi Arabia',
+                'location_ar' => 'الدمام، المملكة العربية السعودية',
+                'location_en' => 'Dammam, Saudi Arabia',
 
-                'image' => 'projects/commercial-grc-facade.jpg',
+                'image' => 'projects/custom-modern-wardrobes.jpg',
 
                 'sort_order' => 3,
                 'is_active' => true,
             ],
 
             [
-                'title_ar' => 'أعمال كرانيش وزخارف GRC مكة',
-                'title_en' => 'GRC Makkah Cornices & Decorative Works',
+                'title_ar' => 'تكسيات جدارية ومرايات ديكورية',
+                'title_en' => 'Decorative Wall Finishes & Mirrors',
 
-                'slug' => 'grc-makkah-cornices-decorative-works',
+                'slug' => 'decorative-wall-finishes-mirrors',
 
-                'category_ar' => 'كرانيش وزخارف GRC مكة',
-                'category_en' => 'GRC Makkah Cornices & Decorations',
+                'category_ar' => 'تكسيات ومرايات',
+                'category_en' => 'Wall Finishes & Mirrors',
 
                 'description_ar' =>
-                    'تصنيع وتركيب كرانيش وحليات وزخارف GRC في مكة المكرمة للواجهات الخارجية، مع تنفيذ التفاصيل المعمارية بدقة للحصول على واجهة متناسقة ومميزة. تشمل أعمال جي آر سي مكة تنفيذ العناصر الزخرفية حسب التصميم والمقاسات المطلوبة.',
+                    'تنفيذ تكسيات جدارية ومرايات ديكورية بتصاميم عصرية تضيف عمقًا واتساعًا للمكان، مع دمج الخامات والإضاءة بطريقة تبرز جمال التفاصيل الداخلية.',
 
                 'description_en' =>
-                    'Manufacturing and installation of GRC Makkah cornices, trims, and decorative elements for exterior facades, with precise architectural detailing and professional finishing.',
+                    'Modern wall finishes and decorative mirrors that enhance depth and space, combining materials and lighting to highlight the beauty of the interior details.',
 
-                'location_ar' => 'مكة المكرمة، المملكة العربية السعودية',
-                'location_en' => 'Makkah, Saudi Arabia',
+                'location_ar' => 'القطيف، المملكة العربية السعودية',
+                'location_en' => 'Qatif, Saudi Arabia',
 
-                'image' => 'projects/grc-cornices.jpg',
+                'image' => 'projects/wall-finishes-mirrors.jpg',
 
                 'sort_order' => 4,
                 'is_active' => true,
             ],
 
             [
-                'title_ar' => 'أعمدة وأقواس GRC مكة لمدخل مشروع',
-                'title_en' => 'GRC Makkah Columns & Arches for Project Entrance',
+                'title_ar' => 'تصميم مدخل واستقبال فاخر',
+                'title_en' => 'Luxury Entrance & Reception Design',
 
-                'slug' => 'grc-makkah-columns-arches-project-entrance',
+                'slug' => 'luxury-entrance-reception-design',
 
-                'category_ar' => 'عناصر GRC مكة المعمارية',
-                'category_en' => 'GRC Makkah Architectural Elements',
+                'category_ar' => 'مداخل واستقبالات',
+                'category_en' => 'Entrance & Reception Designs',
 
                 'description_ar' =>
-                    'تنفيذ أعمدة وأقواس وعناصر GRC مكة المعمارية لتصميم مدخل مميز للمشروع، مع مراعاة الأبعاد والتناسق بين العناصر والتصميم العام للواجهة. يوفر جي آر سي مكة حلولًا مخصصة للأعمدة والأقواس والمداخل المعمارية.',
+                    'تصميم وتنفيذ مدخل واستقبال فاخر بتفاصيل مودرن وخامات متناسقة، لخلق انطباع أول مميز يعكس أسلوب المنزل ويمنح المكان طابعًا راقيًا.',
 
                 'description_en' =>
-                    'Custom GRC Makkah columns, arches, and architectural elements for a distinctive project entrance, designed according to project dimensions and the overall facade design.',
+                    'A luxury entrance and reception design featuring modern details and coordinated materials, creating a distinctive first impression that reflects the style of the home.',
 
-                'location_ar' => 'مكة المكرمة، المملكة العربية السعودية',
-                'location_en' => 'Makkah, Saudi Arabia',
+                'location_ar' => 'الخبر، المملكة العربية السعودية',
+                'location_en' => 'Khobar, Saudi Arabia',
 
-                'image' => 'projects/grc-columns-arches.jpg',
+                'image' => 'projects/luxury-entrance-reception.jpg',
 
                 'sort_order' => 5,
                 'is_active' => true,
             ],
 
             [
-                'title_ar' => 'تنفيذ ديكورات واجهة فيلا GRC مكة',
-                'title_en' => 'GRC Makkah Villa Facade Exterior Decoration',
+                'title_ar' => 'ركن كوفي بتصميم مودرن',
+                'title_en' => 'Modern Coffee Corner',
 
-                'slug' => 'grc-makkah-villa-facade-exterior-decoration',
+                'slug' => 'modern-coffee-corner',
 
-                'category_ar' => 'ديكورات واجهات الفلل في مكة',
-                'category_en' => 'GRC Makkah Villa Facade Decorations',
+                'category_ar' => 'ركن كوفي',
+                'category_en' => 'Coffee Corner Designs',
 
                 'description_ar' =>
-                    'تنفيذ ديكورات خارجية وعناصر GRC لواجهة فيلا في مكة المكرمة، تشمل الحليات والإطارات والزخارف والكرانيش المعمارية لإبراز تفاصيل الواجهة وتحسين المظهر الخارجي. تم تصميم أعمال جي آر سي مكة لتناسب الطابع المعماري للفيلا.',
+                    'تصميم وتنفيذ ركن كوفي مودرن داخل المنزل بتفاصيل عملية وأنيقة، مع استغلال المساحة وتنسيق الخامات والألوان والإضاءة لإضافة لمسة مميزة للمكان.',
 
                 'description_en' =>
-                    'Exterior GRC decorations and architectural elements for a villa facade in Makkah, including trims, frames, cornices, and decorative details designed to enhance the building exterior.',
+                    'A modern home coffee corner designed with practical and elegant details, making smart use of space while coordinating materials, colors, and lighting.',
 
-                'location_ar' => 'مكة المكرمة، المملكة العربية السعودية',
-                'location_en' => 'Makkah, Saudi Arabia',
+                'location_ar' => 'الدمام، المملكة العربية السعودية',
+                'location_en' => 'Dammam, Saudi Arabia',
 
-                'image' => 'projects/villa-exterior-decoration.jpg',
+                'image' => 'projects/modern-coffee-corner.jpg',
 
                 'sort_order' => 6,
+                'is_active' => true,
+            ],
+
+            [
+                'title_ar' => 'تجديد وترميم منزل بالكامل',
+                'title_en' => 'Complete Home Renovation',
+
+                'slug' => 'complete-home-renovation',
+
+                'category_ar' => 'ترميم وتجديد',
+                'category_en' => 'Home Renovation & Remodeling',
+
+                'description_ar' =>
+                    'تنفيذ أعمال تجديد وترميم منزل بالكامل مع تحديث الديكورات والتشطيبات وإعادة تنظيم المساحات الداخلية للوصول إلى تصميم عصري وعملي يناسب احتياجات أصحاب المنزل.',
+
+                'description_en' =>
+                    'A complete home renovation including updated finishes, interior decoration, and improved space planning to create a modern and functional home tailored to the owners’ needs.',
+
+                'location_ar' => 'القطيف، المملكة العربية السعودية',
+                'location_en' => 'Qatif, Saudi Arabia',
+
+                'image' => 'projects/complete-home-renovation.jpg',
+
+                'sort_order' => 7,
+                'is_active' => true,
+            ],
+
+            [
+                'title_ar' => 'ديكور داخلي متكامل لفيلا',
+                'title_en' => 'Complete Villa Interior Design',
+
+                'slug' => 'complete-villa-interior-design',
+
+                'category_ar' => 'ديكور داخلي متكامل',
+                'category_en' => 'Complete Interior Design',
+
+                'description_ar' =>
+                    'تنفيذ ديكور داخلي متكامل لفيلا يشمل تنسيق المداخل وغرف النوم وديكورات التلفزيون والخزائن والتكسيات والمرايات، مع توحيد الهوية التصميمية لجميع المساحات.',
+
+                'description_en' =>
+                    'Complete villa interior design covering entrances, bedrooms, TV walls, wardrobes, wall finishes, and mirrors, with a unified design identity across all spaces.',
+
+                'location_ar' => 'الدمام، المملكة العربية السعودية',
+                'location_en' => 'Dammam, Saudi Arabia',
+
+                'image' => 'projects/complete-villa-interior.jpg',
+
+                'sort_order' => 8,
                 'is_active' => true,
             ],
 
